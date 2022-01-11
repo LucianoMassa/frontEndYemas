@@ -22,4 +22,19 @@
     place-items: center;
     
   }
+  .navbar{
+
+    display: flex;
+    place-items: center;
+    flex-direction: row;
+
+  }
+  .logo{
+    display: box;
+    margin-left: 0%;
+  }
+  .title{
+    align-self: right;
+
+  }
 
