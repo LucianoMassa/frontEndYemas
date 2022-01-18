@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/Compras/estilo/compras.css">
 </head>
 <body>
     
@@ -17,23 +18,26 @@
         </nav>
         <div class="container">
 
-            <div class="form"> 
+            <form action="/" class="form"> 
 
-                    <label for="producto"> </label>
-                    <input type="text" class="input-producto input" placeholder="nombre del producto">
+                    <label for="producto">Producto</label>
+                    <input type="text"  id="producto" class="input-producto input" placeholder="nombre del producto">
 
-                    <label for="cantidad"> </label>
-                    <input type="number" class="input-cantidad input" placeholder="cantidad">
+                    <label for="cantidad">Cantidad</label>
+                    <input type="number" id="cantidad" class="input-cantidad input" placeholder="cantidad">
 
-                    <label for="precio"> </label>
-                    <input type="number" class="input-precio input" placeholder="precio unitario">
+                    <label for="precio">Precio</label>
+                    <input type="number" id="precio" class="input-precio input" placeholder="precio unitario">
                 
-                    <button type="button">add lista</button>
+                    <input type="submit" value="Add" class="button-add">
+  
 
-            </div>
+            </form>
             <div class="listaproductos" >
 
-                <div class="producto">producto1</div>
+                <div class="producto">producto1
+
+                </div>
                 <div class="producto">producto2</div>
                 <div class="producto">.</div>
                 <div class="producto">.</div>
@@ -45,7 +49,8 @@
 
                 <p class="title">Total: $0000</p>
                 <label for="confirmar" ></label>
-                <button class="confirmar" type="button">confirmar</button>
+                <input type="submit" value="Confirmar" class="primary-button">
+  
                 
             </div>
         </div>
