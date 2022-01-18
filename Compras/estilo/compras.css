@@ -29,7 +29,7 @@
       margin-bottom: 12px;
       justify-content: space-between;
       align-items: center;
-      background: var(--very-light-pink);
+      background: var(--text-input-field);
       
   }
 
@@ -63,7 +63,7 @@
     place-items: center;
   
   }
-  .producto{
+  .product{
     border-bottom: 1px solid var(--very-light-pink);
   }
   .button-add{
@@ -90,4 +90,20 @@
     background: var(--hospital-green);
     border-radius: 8px;
   }
+  .logo,
+  .usuario{
+    padding: 16px;
+  }
+  .product{
+    display: flex;
+    flex-direction: row;
+  }
+  .nombreprodu,
+  .cnt,
+  .x,
+  .punitario,
+  .importe{
+    margin: 2px 1px;
+  }
+  
   
