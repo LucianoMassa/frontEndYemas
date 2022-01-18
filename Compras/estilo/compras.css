@@ -26,17 +26,21 @@
   .barra{
       display: flex;
       border-bottom: 1px solid var(--hospital-green);
-      margin-bottom: 0px;
+      margin-bottom: 12px;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--very-light-pink);
+      
   }
 
   .container{
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+    display: flex;
+    flex-direction: column;
     width: 300px;
     border: 1px solid var(--hospital-green);
     padding: 14px;
     border-radius: 8px;
-    margin-top: -80x;
+   
 
   }
   .form{
@@ -86,3 +90,4 @@
     background: var(--hospital-green);
     border-radius: 8px;
   }
+  
