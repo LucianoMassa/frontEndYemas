@@ -98,12 +98,9 @@
     display: flex;
     flex-direction: row;
   }
-  .nombreprodu,
-  .cnt,
-  .x,
-  .punitario,
-  .importe{
-    margin: 2px 1px;
+ 
+  .product p{
+    margin: 4px ;
   }
   
   
