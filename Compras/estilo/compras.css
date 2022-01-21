@@ -1,9 +1,9 @@
 :root {
-    --white: #FFFFFF;
-    --black: #000000;
-    --very-light-pink: #C7C7C7;
-    --text-input-field: #F7F7F7;
-    --hospital-green: #ACD9B2;
+    --violeta: ##C020FA;
+    --celeste: ##1798E3;
+    --verde: ##4AFA41;
+    --amarillo: #E3B930;
+    --rojo: ##FF4A36;
     --sm: 14px;
     --md: 16px;
     --lg: 18px;
@@ -25,11 +25,10 @@
 
   .barra{
       display: flex;
-      border-bottom: 1px solid var(--hospital-green);
+      border-bottom: 1px solid var(--celeste);
       margin-bottom: 12px;
       justify-content: space-between;
       align-items: center;
-      background: var(--text-input-field);
       
   }
 
@@ -37,7 +36,7 @@
     display: flex;
     flex-direction: column;
     width: 300px;
-    border: 1px solid var(--hospital-green);
+    border: 1px solid var(--celeste);
     padding: 14px;
     border-radius: 8px;
    
@@ -46,7 +45,7 @@
   .form{
     display: flex;
     flex-direction: column;
-    border: 1px solid var(--very-light-pink);
+    border: 1px solid var(--violeta);
     border-radius: 8px;
     padding: 6px;
     margin-bottom: 4px;
@@ -57,19 +56,19 @@
 
     display: flex;
     flex-direction: column;
-    border: 1px solid var(--very-light-pink);
+    border: 1px solid var(--amarillo);
     border-radius: 8px;
     padding: 8px;
     place-items: center;
   
   }
   .product{
-    border-bottom: 1px solid var(--very-light-pink);
+    border-bottom: 1px solid var(--celeste);
   }
   .button-add{
-    background-color: var(--hospital-green);
+    background-color: var(--verde);
     border-radius: 8px;
-    background: var(--hospital-green);
+    background: var(--verde);
     margin-top: 6px;
 
     width: 50px;
@@ -87,7 +86,7 @@
   }
 
   .primary-button{
-    background: var(--hospital-green);
+    background: var(--celeste);
     border-radius: 8px;
   }
   .logo,
