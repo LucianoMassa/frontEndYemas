@@ -21,8 +21,7 @@
 
             <form action="/" class="form"> 
 
-                    <label for="fecha-entrega" > Fecha de Entrega</label>
-                      <input type="date" id="fecha-entrega" class="input-entrega input">
+                  
 
                  <label for="proveedor">Proveedor</label>
                     <input type="text"  id="proveedor" class="input-proveedor input" placeholder="nombre del Proveedor">
@@ -36,7 +35,7 @@
                     <label for="precio">Precio</label>
                     <input type="number" id="precio" class="input-precio input" placeholder="precio unitario">
                 
-                    <input type="button" value="Add" class="button-add" id="agregarboton" onclick="agregaralista()">
+                    <input type="button" value="Add" class="button-add primary-button" id="agregarboton" onclick="agregaralista()">
   
 
             </form>
@@ -50,6 +49,7 @@
                     <p id="x1"></p>
                     <p id="pu1"></p>
                     <p id="im1"></p>
+                    <input type="button" value="x" class="button-cancel btn1">
                 </div>
                 <div class="product">
                     <p id="np2"></p>
@@ -168,17 +168,34 @@
                 <label for="contado" >Contado</label>
                 <input type="number" id="contado" class="input-contado input" placeholder="eje: 1000,9999, etc...">
                 <div class="pagocredito">   
-                    <label for="credito" >Credito</label>
-                    <input type="number" id="credito" class="input-credito input" placeholder="eje: 1000,9999, etc...">
-                    <label for="fecha-pago" > Fecha</label>
-                    <input type="date" id="fecha-pago" class="input-pago input">
+                    <div>
+                        <label for="credito" >Credito</label>
+                        <input type="number" id="credito" class="input-credito input" placeholder="eje: 1000,9999, etc...">
+                        
+                    </div>
+
+                    <div>
+
+                        <label for="fecha-pago" > Fecha</label>
+                        <input type="date" id="fecha-pago" class="input-pago input">
+                    </div>
                 </div>
                <div class="pagodeposito">
-                <label for="trasferencia" >Transferencia</label>
-                <input type="number" id="transferencia" class="input-trasnferencia input" placeholder="eje: 1000,9999, etc...">
-                <label for="fecha-deposito" > Fecha</label>
-                <input type="date" id="fecha-deposito" class="input-deposito input">
+
+                <div>
+                    <label for="trasferencia" >Transferencia</label>
+                    <input type="number" id="transferencia" class="input-trasnferencia input" placeholder="eje: 1000,9999, etc...">
+                   
                 </div>
+                <div> 
+
+                    <label for="fecha-deposito" > Fecha</label>
+                    <input type="date" id="fecha-deposito" class="input-deposito input">
+                </div>
+                </div>
+                <h1 id="titulopagos">Fecha de Entrega</h1>
+                <label for="fecha-entrega" > Fecha:</label>
+                <input type="date" id="fecha-entrega" class="input-entrega input">
 
                 <label for="confirmar" ></label>
                 <input type="button" value="Confirmar" class="primary-button">

@@ -3,7 +3,7 @@ function agregaralista(params) {
     
     
     const nombre = document.getElementById("producto").value;
-
+    
     const cantidad = document.getElementById("cantidad").value;
 
     const precio = document.getElementById("precio").value;

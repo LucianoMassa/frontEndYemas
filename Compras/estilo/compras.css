@@ -30,7 +30,8 @@
       justify-content: space-between;
       align-items: center;
       background-color: var(--verde);
-      
+      position: fixed;
+      width: 100%;
   }
 
   .container{
@@ -40,7 +41,7 @@
     border: 1px solid var(--verde);
     padding: 14px;
     border-radius: 8px;
-
+margin-top: 74px;
     margin-bottom: 16px;
 
   }
@@ -82,6 +83,8 @@
     width: 200px;
     border-radius: 8px;
     height: 28px;
+    margin-bottom: 12px;
+    
   }
   .producto,
   .cantidad,
@@ -113,14 +116,25 @@
 
   .pagocredito,
   .pagodeposito{
-
-    display: grid;
-
-    margin-top: 12px;
-    margin-bottom: 12px;
+    display: flex;
   }
   #titulopagos{
     font-size: var(--lg);
   }
   
+  .primary-button{
+    height: 32px;
+    margin-bottom: 12px;
+  }
   
+  .pagocredito div,
+  .pagodeposito div{
+
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+  }
+
+  .button-cancel{
+    border-radius: 50%;
+  }
