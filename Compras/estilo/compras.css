@@ -36,11 +36,12 @@
   .container{
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 500px;
     border: 1px solid var(--verde);
     padding: 14px;
     border-radius: 8px;
-   
+
+    margin-bottom: 16px;
 
   }
   .form{
@@ -80,6 +81,7 @@
   .input{
     width: 200px;
     border-radius: 8px;
+    height: 28px;
   }
   .producto,
   .cantidad,
@@ -102,6 +104,23 @@
  
   .product p{
     margin: 4px ;
+  }
+  
+  .resultado{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pagocredito,
+  .pagodeposito{
+
+    display: grid;
+
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+  #titulopagos{
+    font-size: var(--lg);
   }
   
   

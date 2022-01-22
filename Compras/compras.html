@@ -164,17 +164,21 @@
 
                 <p class="title">Total: $0000</p>
 
-                <h1> Tipo de Pago</h1>
+                <h1 id="titulopagos"> Tipos de Pagos</h1>
                 <label for="contado" >Contado</label>
                 <input type="number" id="contado" class="input-contado input" placeholder="eje: 1000,9999, etc...">
-                <label for="credito" >A credito</label>
-                <input type="number" id="credito" class="input-credito input" placeholder="eje: 1000,9999, etc...">
-                <label for="fecha-pago" > Fecha de Pago</label>
-                <input type="date" id="fecha-pago" class="input-pago input">
+                <div class="pagocredito">   
+                    <label for="credito" >Credito</label>
+                    <input type="number" id="credito" class="input-credito input" placeholder="eje: 1000,9999, etc...">
+                    <label for="fecha-pago" > Fecha</label>
+                    <input type="date" id="fecha-pago" class="input-pago input">
+                </div>
+               <div class="pagodeposito">
                 <label for="trasferencia" >Transferencia</label>
                 <input type="number" id="transferencia" class="input-trasnferencia input" placeholder="eje: 1000,9999, etc...">
-                <label for="fecha-deposito" > Fecha de Deposito</label>
+                <label for="fecha-deposito" > Fecha</label>
                 <input type="date" id="fecha-deposito" class="input-deposito input">
+                </div>
 
                 <label for="confirmar" ></label>
                 <input type="button" value="Confirmar" class="primary-button">
