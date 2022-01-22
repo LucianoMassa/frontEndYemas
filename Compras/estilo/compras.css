@@ -1,9 +1,9 @@
 :root {
-    --violeta: ##C020FA;
-    --celeste: ##1798E3;
-    --verde: ##4AFA41;
+    --violeta: #C020FA;
+    --celeste: #1798E3;
+    --verde: #80bd9f;
     --amarillo: #E3B930;
-    --rojo: ##FF4A36;
+    --rojo: #F98866;
     --sm: 14px;
     --md: 16px;
     --lg: 18px;
@@ -25,18 +25,19 @@
 
   .barra{
       display: flex;
-      border-bottom: 1px solid var(--celeste);
+      border-bottom: 1px solid var(--verde);
       margin-bottom: 12px;
       justify-content: space-between;
       align-items: center;
+      background-color: var(--verde);
       
   }
 
   .container{
     display: flex;
     flex-direction: column;
-    width: 300px;
-    border: 1px solid var(--celeste);
+    width: 400px;
+    border: 1px solid var(--verde);
     padding: 14px;
     border-radius: 8px;
    
@@ -45,7 +46,7 @@
   .form{
     display: flex;
     flex-direction: column;
-    border: 1px solid var(--violeta);
+    border: 1px solid var(--amarillo);
     border-radius: 8px;
     padding: 6px;
     margin-bottom: 4px;
@@ -60,6 +61,7 @@
     border-radius: 8px;
     padding: 8px;
     place-items: center;
+    margin-top: 12px;
   
   }
   .product{

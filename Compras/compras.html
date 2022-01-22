@@ -21,6 +21,12 @@
 
             <form action="/" class="form"> 
 
+                    <label for="fecha-entrega" > Fecha de Entrega</label>
+                      <input type="date" id="fecha-entrega" class="input-entrega input">
+
+                 <label for="proveedor">Proveedor</label>
+                    <input type="text"  id="proveedor" class="input-proveedor input" placeholder="nombre del Proveedor">
+
                     <label for="producto">Producto</label>
                     <input type="text"  id="producto" class="input-producto input" placeholder="nombre del producto">
 
@@ -34,8 +40,10 @@
   
 
             </form>
-            <div class="listaproductos" >
 
+            
+            <div class="listaproductos" >
+                <p class="encabezado"> Producto - Cantidad X Precio -  Importe</p>
                 <div class="product">
                     <p id="np1"></p>
                     <p id="cnt1"></p>
@@ -155,11 +163,26 @@
             <div class="resultado">
 
                 <p class="title">Total: $0000</p>
+
+                <h1> Tipo de Pago</h1>
+                <label for="contado" >Contado</label>
+                <input type="number" id="contado" class="input-contado input" placeholder="eje: 1000,9999, etc...">
+                <label for="credito" >A credito</label>
+                <input type="number" id="credito" class="input-credito input" placeholder="eje: 1000,9999, etc...">
+                <label for="fecha-pago" > Fecha de Pago</label>
+                <input type="date" id="fecha-pago" class="input-pago input">
+                <label for="trasferencia" >Transferencia</label>
+                <input type="number" id="transferencia" class="input-trasnferencia input" placeholder="eje: 1000,9999, etc...">
+                <label for="fecha-deposito" > Fecha de Deposito</label>
+                <input type="date" id="fecha-deposito" class="input-deposito input">
+
                 <label for="confirmar" ></label>
-                <input type="submit" value="Confirmar" class="primary-button">
+                <input type="button" value="Confirmar" class="primary-button">
   
                 
             </div>
+
+
         </div>
 
     </div>
