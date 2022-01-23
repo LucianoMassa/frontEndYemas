@@ -1,4 +1,4 @@
-class Cuenta{
+export class Cuenta{
    
 constructor (codigo,nombre){
 
@@ -38,15 +38,16 @@ constructor (codigo,nombre){
 
 }
 
-class producto extends Cuenta{
+export class producto extends Cuenta{
 
     constructor(codigo, nombre, codbarra,cantidad, precio){
-
+        alert("entro");
         super(codigo,nombre);
         this.codbarra = codbarra;
         this.cantidad = cantidad;
         this.precio = precio;
 
+         if((cantidad <= 0 )||( precio <= 0)){ return null;}
     }
 
 retcodbarra(){return this.codbarra;}
@@ -59,7 +60,7 @@ rescantidad(valor){this.cantidad = this.cantidad - valor;}
 
 }
 
-class listproduct extends producto(){
+export default class listproduct extends producto(){
 
     constructor(){
         this.list = [];
@@ -74,8 +75,10 @@ class listproduct extends producto(){
 
         }else{ return false; }
     }
+
+    setproduct(p){
     // falta sacar producto de la lista
-    setproduct(p){}
+    }
     buscarproduct(codp){
 
         this.list.forEach(px =>  {
@@ -102,8 +105,129 @@ class listproduct extends producto(){
 
     }
 
+    retlista(){ return this.list;}
+
 
     
+}
+
+export default class formulario{
+
+    constructor(codigo, fechaemision,emisor, receptor){
+        this.codigo = codigo;
+        this.fechaemision = fechaemision;
+        this.fecharecepcion = null;
+        this.emisor = emisor;
+        this.receptor = receptor;
+
+    }
+
+    getcodigo(){
+        return this.codigo;
+    }
+
+    getfechaemision(){
+        return this.fechaemision;
+    }
+
+    getfecharecepcion(){
+        return this.fecharecepcion;
+    }
+
+    setfechaderecepcion(valor){
+        if(this.fecharecepcion <= valor){
+            this.fecharecepcion = valor;
+            return true;
+        }else{ return false;}
+
+    }
+    getreceptor(){
+        return this.receptor;
+    }
+
+    setreceptor(valor){
+        this.receptor = valor;
+    }
+
+    getemisor(){
+        return this.emisor;
+    }
+}
+
+export default class NotaDePedido extends formulario{
+
+constructor(codigo,fechaemision,emisor,receptor){
+    super(codigo,fechaemision,fecharecepcion,emisor,receptor);
+    this.listaproducto = new listproduct();
+    this.verificacion = false;
+    this.pagos = [];
+    
+}
+
+importetotal(){
+
+    sum =0;
+
+    this.listaproducto.retlista().forEach(p =>{
+
+        sum = sum + p.retimporte();
+    });
+
+    return sum;
+}
+
+agregarproducto(p){
+
+    if(this.listaproducto.addproduct(p)==true){
+        // se cargo correctamente
+    }else{
+        //el producto no se pudo cargar
+    }
+}
+
+cantidadproductos(){
+    return this.listaproducto.retlista().length();
+}
+
+setverificacion(){ 
+    this.verificacion = true;
+}
+getverificacion(){ 
+    return this.verificacion;
+}
+
+getpagos(){
+    return this.pagos;
+}
+setpagos(valor){
+    
+    this.pagos.pop(valor);
+}
+
+
+getlistaproductos(){
+    return this.listaproducto;
+}
+
+}
+
+export default class pago extends Cuenta{
+
+    constructor(codigo,nombre,importe){
+    super(codigo,nombre);
+    this.importe = importe;
+    }
+    getimporte(){
+        return this.importe;
+    }
+
+    setimporte(valor){
+        if(valor >= 0){
+            this.importe = valor;
+            return true;
+        }else{ return false;}
+    }
+
 }
 
 class Persona extends Cuenta{
@@ -189,6 +313,10 @@ class Usuario extends Persona{
      modcontrase(valor){
          this.contrase = valor;
      }   
+}
+
+export class pepito{
+    constructor(){}
 }
 
 

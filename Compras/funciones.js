@@ -1,3 +1,7 @@
+
+    
+
+
 function ClickAdd() {
 
     const nombre = document.getElementById("producto").value;
@@ -5,55 +9,48 @@ function ClickAdd() {
     const cantidad = document.getElementById("cantidad").value;
 
     const precio = document.getElementById("precio").value;
+    alert("2");
+    
+    prx = new producto("codigo",nombre,"codbarra",cantidad,precio);
+    alert("2");
+    
+    if(prx!=null){
+       
 
-    if(verificafrontend(nombre,cantidad,precio)== true){
+        if(verificabackend(nombre,precio)==true){
 
-        if(verificabackend(nombre,cantidad,precio)==true){
+
+            if(NdP.agregarproducto(prx)==true){
+                mostrarenlista();
+            }
+            
 
 
         }
+
+    }else{
+        alert("fallo en la carga de productos");
     }
 
     
 }
 
-function verificafrontend(nombre,cantidad, precio) {
-    i = 1;
-    band = false;
-    while((i<16)&&(band==false)){
-
-        if(document.getElementById(np+i).innerText==""){
-             document.getElementById("np"+i).innerText=nombre+" - "; 
-             document.getElementById("cnt"+i).innerText=cantidad; 
-             document.getElementById("x"+i).innerText="X"; 
-             document.getElementById("pu"+i).innerText="$"+precio +" - "; 
-             document.getElementById("im"+i).innerText="$"+(precio*cantidad); 
-             
-             band = true;
-            }
-        i++; 
-    }
-    if(band==true){
-   document.getElementById("producto").value = 
-   document.getElementById("cantidad").value=
-    document.getElementById("precio").value="";
-    return true;
-    }else{ return false;}
-}
-
-
-
-// existencia de nombre en lista y retorna posicion
-
-function inlista(nombre,cantidad,precio) {
+function mostrarenlista() {
     
-}
+    for(i =0; i< NdP.getlistaproductos().retlista().length();i++){
 
+        document.getElementById("np"+(i+1)).innerText=NdP.getlistaproductos().retlista()[i].nombre;
+
+    }
+
+}
 
 
 
 // verificar clickAdd in the backend
 
-function verificabackend(nombre,cantidad,precio) {
+function verificabackend(nombre,precio) {
     return true;
 }
+
+import {producto,Cuenta} from "../estructura.js";
