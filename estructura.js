@@ -1,8 +1,5 @@
 class Cuenta{
-    nombre;
-    codigo;
-    debe;
-     haber;
+   
 constructor (codigo,nombre){
 
     this.nombre=nombre;
@@ -11,19 +8,19 @@ constructor (codigo,nombre){
     this.haber = 0; 
 }
  saldo(){ 
-     return (debe-haber);
+     return (this.debe-this.haber);
     }
  retname(){ 
-     return nombre;
+     return this.nombre;
     }
  retcodigo(){
-     return codigo;
+     return this.codigo;
     }
  retdebe(){
-     return debe;
+     return this.debe;
     }
  rethaber(){
-     return haber;
+     return this.haber;
     }
  retcuenta(){
      return this.codigo+"|"+this.nombre;
@@ -36,6 +33,42 @@ constructor (codigo,nombre){
         this.haber = this.haber + valor;
     }
 
+    setdebe(valor){ this.debe = this.debe -valor;}
+    sethaber(valor){this.haber = this.haber - valor;}
+
+}
+
+class producto extends Cuenta{
+
+    constructor(codigo, nombre, codbarra,cantidad, precio){
+
+        super(codigo,nombre);
+        this.codbarra = codbarra;
+        this.cantidad = cantidad;
+        this.precio = precio;
+
+    }
+
+retcodbarra(){return this.codbarra;}
+retprecio(){ return this.precio;}
+retcnt(){ return this.cantidad;}
+nuevoprecio(valor){  this.precio = valor;}
+retimporte(){ return this.cantidad * this.importe;}
+addcantidad(valor){ this.cantidad += valor;}
+rescantidad(valor){this.cantidad = this.cantidad - valor;}
+
+}
+
+class listproduct extends producto(){
+
+    constructor(){
+        this.list = [];
+    }
+
+    addproduct(p){}
+    setproduct(p){}
+    buscarproduct(codp){}
+    
 }
 
 class Persona extends Cuenta{

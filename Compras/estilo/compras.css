@@ -12,6 +12,7 @@
     margin: 0;
     font-family: 'Quicksand', sans-serif;
     
+    background: var(--rojo);
   }
 
   .compras{
@@ -43,6 +44,8 @@
     border-radius: 8px;
 margin-top: 74px;
     margin-bottom: 16px;
+
+    background: papayawhip;
 
   }
   .form{
@@ -110,8 +113,13 @@ margin-top: 74px;
   }
   
   .resultado{
-    display: flex;
+   display: flex;
     flex-direction: column;
+    border: 1px solid var(--amarillo);
+    border-radius: 8px;
+    padding: 8px;
+    place-items: center;
+    margin-top: 12px;
   }
 
   .pagocredito,
@@ -138,3 +146,23 @@ margin-top: 74px;
   .button-cancel{
     border-radius: 50%;
   }
+
+  .estados{
+    border: 1px solid var(--amarillo);
+
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
+    margin-left: 12px;
+    
+  }
+  .cuentas{
+
+    display: block;
+    
+  }
+
+  
+
+
