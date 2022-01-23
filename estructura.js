@@ -65,9 +65,44 @@ class listproduct extends producto(){
         this.list = [];
     }
 
-    addproduct(p){}
+    addproduct(p){
+
+        if(this.existe()==false){
+
+            this.list.pop(p);
+            return true;
+
+        }else{ return false; }
+    }
+    // falta sacar producto de la lista
     setproduct(p){}
-    buscarproduct(codp){}
+    buscarproduct(codp){
+
+        this.list.forEach(px =>  {
+        
+            if(px.retcodigo()==codp){ return px;}
+    
+    
+         });
+    
+         return null;
+
+
+    }
+    existe(p){
+
+     this.list.forEach(px =>  {
+        
+        if(px===p){ return true;}
+
+
+     });
+
+     return false;
+
+    }
+
+
     
 }
 
