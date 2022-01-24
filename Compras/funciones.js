@@ -22,5 +22,6 @@ function ClickConfirm() {
     const fechacredito =  document.getElementById("fecha-pago").value;
     const transferencia =  document.getElementById("transferencia").value;
     const fechadeposito =  document.getElementById("fecha-deposito").value;
+    const fechaentrega = document.getElementById("fecha-entrega").value;
 }
 
