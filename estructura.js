@@ -40,7 +40,7 @@ constructor (codigo,nombre){
 
 export class producto extends Cuenta{
 
-    constructor(codigo, nombre, codbarra,cantidad, precio){
+    constructor(codigo, codbarra, nombre,cantidad, precio){
         alert("entro");
         super(codigo,nombre);
         this.codbarra = codbarra;
@@ -157,11 +157,12 @@ export default class formulario{
 export default class NotaDePedido extends formulario{
 
 constructor(codigo,fechaemision,emisor,receptor){
-    super(codigo,fechaemision,fecharecepcion,emisor,receptor);
+    super(codigo,fechaemision,fecharecepcion,emisor,receptor,proveedor);
     this.listaproducto = new listproduct();
     this.verificacion = false;
     this.pagos = [];
-    
+
+    this.proveedor = this.proveedor;
 }
 
 importetotal(){
