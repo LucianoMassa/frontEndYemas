@@ -1,7 +1,6 @@
 
     
 
-
 function ClickAdd() {
 
     const nombre = document.getElementById("producto").value;
@@ -53,4 +52,3 @@ function verificabackend(nombre,precio) {
     return true;
 }
 
-import {producto,Cuenta} from "../estructura.js";
