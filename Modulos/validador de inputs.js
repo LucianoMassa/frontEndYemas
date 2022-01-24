@@ -1,4 +1,4 @@
 
 
-export const tipnumers = (currentValue) => currentValue > 0;
+export  const tipnumers = (currentValue) => currentValue > 0;
 

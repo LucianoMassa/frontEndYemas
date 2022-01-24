@@ -8,47 +8,19 @@ function ClickAdd() {
     const cantidad = document.getElementById("cantidad").value;
 
     const precio = document.getElementById("precio").value;
-    alert("2");
-    
-    prx = new producto("codigo",nombre,"codbarra",cantidad,precio);
-    alert("2");
-    
-    if(prx!=null){
-       
-
-        if(verificabackend(nombre,precio)==true){
-
-
-            if(NdP.agregarproducto(prx)==true){
-                mostrarenlista();
-            }
-            
-
-
-        }
-
-    }else{
-        alert("fallo en la carga de productos");
-    }
-
-    
-}
-
-function mostrarenlista() {
-    
-    for(i =0; i< NdP.getlistaproductos().retlista().length();i++){
-
-        document.getElementById("np"+(i+1)).innerText=NdP.getlistaproductos().retlista()[i].nombre;
-
-    }
 
 }
 
+function ClickConfirm() {
 
+    const proveedor =  document.getElementById("proveedor").value;
 
-// verificar clickAdd in the backend
+    // lista de productos
 
-function verificabackend(nombre,precio) {
-    return true;
+    const contado =  document.getElementById("contado").value;
+    const credito =  document.getElementById("credito").value;
+    const fechacredito =  document.getElementById("fecha-pago").value;
+    const transferencia =  document.getElementById("transferencia").value;
+    const fechadeposito =  document.getElementById("fecha-deposito").value;
 }
 
