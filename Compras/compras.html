@@ -5,20 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../Estilos/Colores.css">
     <link rel="stylesheet" href="./estilo/compras.css">
+    <link rel="stylesheet" href="../Estilos/Barra.css">
+    <link rel="stylesheet" href="../Estilos/Container.css">
+    <link rel="stylesheet" href="../Estilos/Container-Center.css">
+    <link rel="stylesheet" href="../Estilos/Lista-Productos.css">
 </head>
 <body>
 
 
     <script src="./funciones.js" type="module" ></script>
     <script src="../estructura.js" nomodule></script>
+
     <nav class="barra"> 
-        <img src="" alt="Logo" class="logo">
-        <h1>Nota de Pedido</h1>
-        <div class="usuario">usuario</div>
+
+        <img src="/" alt="menu" class="menu">
+        
+        <div class="navbar-left">
+            <img src="/" alt="logo" class="logo">
+            
+            <ul>
+                <li>
+                    <a href="">Notas de Pedido</a>
+                </li>
+                <li>
+                    <a href="">Procesamiento</a>
+                </li>
+                <li>
+                    <a href="">Productos 
+                        Terminados</a>
+                </li>
+                <li>
+                    <a href="">Envio</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="navbar-right">
+            <ul>
+                <li>usuario</li>
+            </ul>
+
+    
+        </div>
+        
+
     </nav>
-    <div class="compras">
-        <div class="container">
+
+    
+
+    <div class="container">
+        <div class="container-center">
 
             <form action="/" class="form"> 
 
@@ -42,40 +80,50 @@
             </form>
 
             
-            <div class="listaproductos" >
-                <p class="encabezado"> Producto - Cantidad X Precio -  Importe</p>
-                <div class="product">
-                    <p id="p1"></p>
-                    <input type="button" value="x" class="button-cancel btn1">
-                </div>
-                
-                <div class="product">
-                    <p id="p2"></p>
-                    <input type="button" value="x" class="button-cancel btn1">
-                </div>
-                <div class="product">
-                    <p id="p3"></p>
-                    <input type="button" value="x" class="button-cancel btn1">
-                </div>
-                <div class="product">
-                    <p id="p4"></p>
-                    <input type="button" value="x" class="button-cancel btn1">
-                </div>
-                <div class="product">
-                    <p id="p5"></p>
-                    <input type="button" value="x" class="button-cancel btn1">
-                </div>
-                <div class="product">
-                    <p id="p6"></p>
-                    <input type="button" value="x" class="button-cancel btn1">
-                </div>
-                <div class="product">
-                    <p id="p7"></p>
-                    <input type="button" value="x" class="button-cancel btn1">
+            
+            <div class="container-center">
+
+                <div class="cartaproducto" id="encabezado">
+                    <p>Producto</p>
+                    <p>Cantidad</p>
+                    <p>Precio</p>
+                    <p>Importe</p>
+
                 </div>
 
+                <div class="listapedido">
+                    
+                      <div class="cartaproducto">
+                      
+                        <p>Huevo Grande</p>
+                        <p>20</p>
+                        <p>$30,00</p>
+                        <p>$60,00</p>
+
+                        
+                      </div>
+              
+                      <div class="cartaproducto">
+                        
+                        <p>Huevo Grande</p>
+                        <p>20</p>
+                        <p>$30,00</p>
+                        <p>$60,00</p>
+                      </div>
+              
+                      <div class="cartaproducto">
+                        <p>Huevo Grande</p>
+                        <p>20</p>
+                        <p>$30,00</p>
+                        <p>$60,00</p>
+                      </div>
+
+                </div>
 
             </div>
+
+
+            
             <div class="resultado">
 
                 <p class="title">Total: $0000</p>

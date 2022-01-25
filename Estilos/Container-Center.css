@@ -1,0 +1,14 @@
+
+.container-center{
+
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+    border-radius: 8px;
+    width: 450px;
+    margin-top: 74px;
+    background: papayawhip;
+    padding: 12px;
+    align-items: center;
+}

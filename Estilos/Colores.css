@@ -1,0 +1,16 @@
+:root {
+    --violeta: #C020FA;
+    --celeste: #1798E3;
+    --verde: #80bd9f;
+    --amarillo: #E3B930;
+    --rojo: #F98866;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+  }
+  body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    
+    background: var(--rojo);
+  }
