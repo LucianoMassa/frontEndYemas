@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proceso</title>
+    <link rel="stylesheet" href="/Estilos/Colores.css">
+    <link rel="stylesheet" href="/Estilos/Barra.css">
+    <link rel="stylesheet" href="/Estilos/Container.css">
+    <link rel="stylesheet" href="/Estilos/Container-Center.css">
+    <link rel="stylesheet" href="/Estilos/Formulario.css">
+     <link rel="stylesheet" href="/Estilos/Lista-Productos.css">
+    
+</head>
+<body>
+    <nav class="barra"> 
+
+        <img src="/" alt="menu" class="menu">
+        
+        <div class="navbar-left">
+            <img src="/" alt="logo" class="logo">
+            
+            <ul>
+                <li>
+                    <a href="/Produccion/Recepcion/recepcion.html">Notas de Pedido</a>
+                </li>
+                <li>
+                    <a href="/Produccion/Proceso/proceso.html">Proceso</a>
+                </li>
+                <li>
+                    <a href="">Productos 
+                        Terminados</a>
+                </li>
+                <li>
+                    <a href="">Envio</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="navbar-right">
+            <ul>
+                <li>usuario</li>
+            </ul>
+        </div>
+        
+
+    </nav>
+
+    <div class="container">
+        <div class="container-center">
+
+          
+            <p> Proceso de Produccion</p>
+            
+            
+            <form action="/" class="form"> 
+
+                  
+
+                <label for="proveedor">Galpon</label>
+                   <input type="text"  id="proveedor" class="input-proveedor input" placeholder="color del galpon">
+
+                   <label for="producto">Producto</label>
+                   <input type="text"  id="producto" class="input-producto input" placeholder="nombre del producto">
+
+                   <label for="cantidad">Cantidad</label>
+                   <input type="number" id="cantidad" class="input-cantidad input" placeholder="cantidad">
+
+                   <input type="button" value="Add" class="button-add primary-button" id="agregarboton" onclick="ClickAdd()">
+ 
+
+           </form>
+           <div class="container-center">
+
+            <div class="listapedido">
+                
+                  <div class="cartaproducto">
+                  
+                    <p>Galpon</p>
+                    <p>Deposito</p>
+                    <p>1000</p>
+                    <p>Disponibles</p>
+
+                    
+                  </div>
+          
+                  <div class="cartaproducto">
+                    
+                    <p>Galpon</p>
+                    <p>Amarillo</p>
+                    <p>400</p>
+                    <p>En Produccion</p>
+                  </div>
+          
+                  <div class="cartaproducto">
+                    <p>Galpon</p>
+                    <p>Rojo</p>
+                    <p>200</p>
+                    <p>En Produccion</p>
+                  </div>
+                  <div class="cartaproducto">
+                    <p>Galpon</p>
+                    <p>Azul</p>
+                    <p>600</p>
+                    <p>En Produccion</p>
+                  </div>
+                  <div class="cartaproducto">
+                    <p>Galpon</p>
+                    <p>Verde</p>
+                    <p>100</p>
+                    <p>En Produccion</p>
+                  </div>
+
+            </div>
+
+        </div>
+
+
+
+        </div>
+
+    </div>
+</body>
+</html>

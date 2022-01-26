@@ -4,94 +4,138 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produccion</title>
+    <title>Nota de Pedido</title>
     <link rel="stylesheet" href="/Estilos/Colores.css">
     <link rel="stylesheet" href="/Estilos/Container.css">
     <link rel="stylesheet" href="/Estilos/Container-Center.css">
     <link rel="stylesheet" href="/Estilos/Lista-Productos.css">
+    <link rel="stylesheet" href="/Estilos/Formulario.css">
+    <link rel="stylesheet" href="/Estilos/BotonPrincipal.css">
+    <link rel="stylesheet" href="/Estilos/Barra.css">
 </head>
 <body>
+  <nav class="barra"> 
+
+    <img src="/" alt="menu" class="menu">
     
+    <div class="navbar-left">
+        <img src="/" alt="logo" class="logo">
+        
+        <ul>
+            <li>
+                <a href="/Produccion/Recepcion/recepcion.html">Notas de Pedido</a>
+            </li>
+            <li>
+                <a href="/Produccion/Proceso/proceso.html">Proceso</a>
+            </li>
+            <li>
+                <a href="">Productos 
+                    Terminados</a>
+            </li>
+            <li>
+                <a href="">Envio</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="navbar-right">
+        <ul>
+            <li>usuario</li>
+        </ul>
+    </div>
+    
+
+</nav>
     <div class="container">
         <div class="container-center">
 
-            <form action="/" class="form"> 
+          <form action="/" class="form"> 
 
-            
-                    <label for="producto">Producto</label>
-                    <input type="text"  id="producto" class="input-producto input" placeholder="nombre del producto">
+                  
 
-                    <label for="cantidad">Cantidad</label>
-                    <input type="number" id="cantidad" class="input-cantidad input" placeholder="cantidad">
-                    <label for="precio">Precio</label>
+               <label for="producto">Producto</label>
+               <input type="text"  id="producto" class="input-producto input" placeholder="nombre del producto">
 
-                    <input type="number" id="precio" class="input-precio input" placeholder="precio unitario">
-                    
-                    <input type="button" value="Add" class="button-add primary-button" id="agregarboton" onclick="ClickAdd()">
-  
+               <label for="cantidad">Cantidad</label>
+               <input type="number" id="cantidad" class="input-cantidad input" placeholder="cantidad">
 
-            </form>
-
-            
-            <div class="container-center">
-
-                <div class="orden">
-                    <p>
-                      <span>03.25.21</span>
-                      <span>3 articles</span>
-                    </p>
-                    <p>$560.00</p>
-
-                <div class="cartaproducto" id="encabezado">
-                    <p>Producto</p>
-                    <p>Cantidad</p>
-                    <p>Precio</p>
-                    <p>Importe</p>
-
-                </div>
-
-                <div class="listapedido">
-                    
-                      <div class="cartaproducto">
-                      
-                        <p>Huevo Grande</p>
-                        <p>20</p>
-                        <p>$30,00</p>
-                        <p>$60,00</p>
-                      </div>
-              
-                      <div class="cartaproducto">
-                        
-                        <p>Huevo Grande</p>
-                        <p>20</p>
-                        <p>$30,00</p>
-                        <p>$60,00</p>
-                      </div>
-              
-                      <div class="cartaproducto">
-                        <p>Huevo Grande</p>
-                        <p>20</p>
-                        <p>$30,00</p>
-                        <p>$60,00</p>
-                      </div>
-
-                </div>
-
-            </div>
-
-            <div class="resultado">
-
-                <p class="title">Total: $0000</p>
-
-                <label for="confirmar" ></label>
-
-                <input type="button" value="Confirmar" class="primary-button" onclick="ClickConfirm()">
-  
-                
-            </div>
+               <label for="precio">Precio</label>
+               <input type="number" id="precio" class="input-precio input" placeholder="precio unitario">
+           
+               <input type="button" value="Add" class="button-add primary-button" id="agregarboton" onclick="ClickAdd()">
 
 
+       </form>
+
+       
+       
+       <div class="container-center">
+        <div class="orden">
+          <p>
+            <span>Proveedor</span>
+            <span>6 articles</span>
+          </p>
+          <p>$560.00</p>
         </div>
+
+           <div class="cartaproducto" id="encabezado">
+               <p>Producto</p>
+               <p>Cantidad</p>
+               <p>Precio</p>
+               <p>Importe</p>
+
+           </div>
+
+           <div class="listapedido">
+               
+                 <div class="cartaproducto">
+                 
+                   <p>Huevo Grande</p>
+                   <p>20</p>
+                   <p>$30,00</p>
+                   <p>$60,00</p>
+
+                   
+                 </div>
+         
+                 <div class="cartaproducto">
+                   
+                   <p>Huevo Grande</p>
+                   <p>20</p>
+                   <p>$30,00</p>
+                   <p>$60,00</p>
+                 </div>
+         
+                 <div class="cartaproducto">
+                   <p>Huevo Grande</p>
+                   <p>20</p>
+                   <p>$30,00</p>
+                   <p>$60,00</p>
+                 </div>
+                 <div class="cartaproducto">
+                   <p>Huevo Grande</p>
+                   <p>20</p>
+                   <p>$30,00</p>
+                   <p>$60,00</p>
+                 </div>
+                 <div class="cartaproducto">
+                   <p>Huevo Grande</p>
+                   <p>20</p>
+                   <p>$30,00</p>
+                   <p>$60,00</p>
+                 </div>
+
+           </div>
+
+       </div>
+
+       <div class="resultado">
+
+        <label for="confirmar" ></label>
+        <input type="button" value="Confirmar" class="primary-button" onclick="ClickConfirm()">
+
+       </div>
+
 
     </div>
     

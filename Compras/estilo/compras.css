@@ -1,61 +1,24 @@
 
 
 
-  .form{
-    display: flex;
-    flex-direction: column;
-    border: 1px solid var(--amarillo);
-    border-radius: 8px;
-    padding: 6px;
-    margin-bottom: 4px;
-    margin-bottom: 6px;
-    place-items: center;
-  }
  
   .product{
     border-bottom: 1px solid var(--celeste);
-   
-  }
-  .button-add{
-    background-color: var(--verde);
-    border-radius: 8px;
-    background: var(--verde);
-    margin-top: 6px;
-
-    width: 50px;
-    border-right: 8px;
-  }
-
-  .input{
-    width: 200px;
-    border-radius: 8px;
-    height: 28px;
-    margin-bottom: 12px;
-    
+    display: flex;
+    flex-direction: row;
   }
   .producto,
   .cantidad,
   .precio{
     margin-top: 6px;
   }
-
   .primary-button{
     background: var(--celeste);
     border-radius: 8px;
   }
-  .logo,
-  .usuario{
-    padding: 16px;
-  }
-  .product{
-    display: flex;
-    flex-direction: row;
-  }
- 
   .product p{
     margin: 4px ;
   }
-  
   .resultado{
    display: flex;
     flex-direction: column;
@@ -65,7 +28,6 @@
     place-items: center;
     margin-top: 12px;
   }
-
   .pagocredito,
   .pagodeposito{
     display: flex;
@@ -78,7 +40,6 @@
     height: 32px;
     margin-bottom: 12px;
   }
-  
   .pagocredito div,
   .pagodeposito div{
 

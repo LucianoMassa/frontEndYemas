@@ -1,0 +1,6 @@
+.primary-button{
+    background: var(--celeste);
+    border-radius: 8px;
+    height: 36px;
+    width: 200px;
+  }
