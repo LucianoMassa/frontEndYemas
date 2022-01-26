@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salida</title>
+    <link rel="stylesheet" href="/Estilos/Colores.css">
+    <link rel="stylesheet" href="/Estilos/Barra.css">
+    <link rel="stylesheet" href="/Estilos/Container.css">
+    <link rel="stylesheet" href="/Estilos/Container-Center.css">
+    <link rel="stylesheet" href="/Estilos/Formulario.css">
+    <link rel="stylesheet" href="/Estilos/Lista-Productos.css">
+    <link rel="stylesheet" href="/Estilos/BotonPrincipal.css">
+</head>
+<body>
+    <nav class="barra"> 
+
+        <img src="/" alt="menu" class="menu">
+        
+        <div class="navbar-left">
+            <img src="/" alt="logo" class="logo">
+            
+            <ul>
+                <li>
+                    <a href="/Produccion/Recepcion/recepcion.html">Notas de Pedido</a>
+                </li>
+                <li>
+                    <a href="/Produccion/Proceso/proceso.html">Proceso</a>
+                </li>
+                <li>
+                    <a href="/Produccion/Terminados/terminados.html">Productos 
+                        Terminados</a>
+                </li>
+                <li>
+                    <a href="/Produccion/Salida/salida.html">Envio</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="navbar-right">
+            <ul>
+                <li>usuario</li>
+            </ul>
+
+    
+        </div>
+        
+
+    </nav>
+
+    <div class="container">
+
+        <div class="container-center">
+            <h1>Envío de Mercadería</h1>
+            <form action="/" class="form"> 
+
+                  
+                   <label for="producto">Producto</label>
+                   <input type="text"  id="producto" class="input-producto input" placeholder="nombre del producto">
+
+                   <label for="cantidad">Cantidad</label>
+                   <input type="number" id="cantidad" class="input-cantidad input" placeholder="cantidad">
+
+                   <input type="button" value="Add" class="button-add primary-button" id="agregarboton" onclick="ClickAdd()">
+ 
+
+           </form>
+
+           <div class="container-center">
+
+            <div class="cartaproducto" id="encabezado">
+                <p>Producto</p>
+                <p>|</p>
+                <p>Cantidad</p>
+
+            </div>
+
+            <div class="listapedido">
+                
+                  <div class="cartaproducto">
+                  
+                    <p>Huevo Grande</p>
+                    <p>|</p>
+                    <p>200</p>
+                    
+                  </div>
+          
+                  <div class="cartaproducto">
+                    
+                    <p>Huevo Grande</p>
+                    <p>|</p>
+                    <p>200</p>
+                  </div>
+          
+                  <div class="cartaproducto">
+                    <p>Huevo Grande</p>
+                    <p>|</p>
+                    <p>200</p>
+                  </div>
+                  <div class="cartaproducto">
+                    <p>Huevo Grande</p>
+                    <p>|</p>
+                    <p>200</p>
+                  </div>
+                  <div class="cartaproducto">
+                    <p>Huevo Grande</p>
+                    <p>|</p>
+                    <p>200</p>
+                  </div>
+                  <div class="cartaproducto">
+                    <p>Huevo Grande</p>
+                    <p>|</p>
+                    <p>200</p>
+                  </div>
+                  <div class="cartaproducto">
+                    <p>Huevo Grande</p>
+                    <p>|</p>
+                    <p>200</p>
+                  </div>
+                  <div class="cartaproducto">
+                    <p>Huevo Grande</p>
+                    <p>|</p>
+                    <p>200</p>
+                  </div>
+
+            </div>
+
+        </div>
+        <div class="resultado">
+
+            <p class="title">Total: xxxxx cartones</p>
+
+         
+            <label for="confirmar" ></label>
+            <input type="button" value="Confirmar" class="primary-button" onclick="ClickConfirm()">
+
+            
+        </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
