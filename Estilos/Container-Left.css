@@ -1,0 +1,14 @@
+.container-left{
+border-radius: 8px;
+    display: flex;
+    flex-direction: center;
+    justify-self: left;
+    position: fixed;
+    align-items: center;
+    width: 350px;
+    height: 400px;
+    background: papayawhip;
+    margin-top: 74px;
+
+    
+}
