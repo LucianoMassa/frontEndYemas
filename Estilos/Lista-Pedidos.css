@@ -1,0 +1,44 @@
+
+.lista-pedidos{
+
+    border-radius: 8px;
+    padding: 8px;
+  }
+  
+  .product{
+  
+   border-bottom: 1px solid var(--amarillo);
+   height: 50px;
+    width: 300px;
+    display:  flex;
+    margin-bottom: 12px;
+    place-items: center;
+    position: relative;
+    
+  }
+  .product div{
+      display:  flex;
+      flex-direction: row;
+      margin-bottom: 12px;
+      font-size: var(--md);
+  }
+  .product a {
+  
+    color: var(--verde);
+    text-decoration: none;
+  
+    display: block;
+  
+    position: absolute;
+    right: 0px;
+  
+    font-weight: bold;
+    font-size: var(--lg);
+  
+    height: auto;
+    width: auto;
+    
+  
+  }
+  
+  

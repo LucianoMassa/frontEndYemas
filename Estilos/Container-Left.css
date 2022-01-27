@@ -9,6 +9,8 @@ border-radius: 8px;
     height: 400px;
     background: papayawhip;
     margin-top: 74px;
+    justify-content: center;
+    flex-direction: column;
 
     
 }

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administracion</title>
+    <link rel="stylesheet" href="/Estilos/Colores.css">
+    <link rel="stylesheet" href="/Estilos/Barra.css">
+    <link rel="stylesheet" href="/Estilos/Container.css">
+    <link rel="stylesheet" href="/Estilos/Container-Center.css">
+    <link rel="stylesheet" href="/Estilos/Lista-Productos.css">
+    <link rel="stylesheet" href="/Estilos/Formulario.css">
+    <link rel="stylesheet" href="/Estilos/Container-Left.css">
+    <link rel="stylesheet" href="/Estilos/Container-Right.css">
+    <link rel="stylesheet" href="/Produccion/Recepcion/recpcion.css">
+</head>
+<body>
+    <nav class="barra"> 
+
+        <img src="/" alt="menu" class="menu">
+        
+        <div class="navbar-left">
+            <img src="/" alt="logo" class="logo">
+            
+            <ul>
+                <li>
+                    <a href="/Administracion/Pedidos/pedidos.html">Notas de Pedidos</a>
+                </li>
+
+                <li>
+                    <a href="/Administracion/Prima/prima.html">Materia Prima</a>
+                </li>
+                <li>
+                    <a href="/Administracion/Terminados/terminados.html">Deposito Produccion</a>
+                </li>
+                <li>
+                    <a href="/Administracion/Envios/envios.html">Enviados</a>
+                </li>
+               
+            </ul>
+        </div>
+
+        <div class="navbar-right">
+            <ul>
+                <li>usuario</li>
+            </ul>
+
+    
+        </div>
+        
+
+    </nav>
+    <div class="container">
+
+        <div class="container-left">
+
+            <h1>Notas de Pedidos</h1>
+            <form action="/" class="form"> 
+
+                  
+
+                <label for="fecha-entrega">Fecha de Confirmadas</label>
+                   <input type="date"  id="fecha-deposito" class="input-entrega input" >
+
+                 
+                   <input type="button" value="Confirmar" class="button-add primary-button" id="agregarboton" onclick="ClickAdd()">
+ 
+
+           </form>
+
+        </div>
+        <div class="container-center">
+
+          
+            <div class="lista-pedidos" >
+
+                
+                <div class="product">
+                    <div>
+                        <p>Proveedor: proveedornr1</p>
+                        <p>Total: $0000</p>
+                        <p>Fecha Entrega: 12/01/21</p>
+
+                    </div>
+
+                
+                  <a href="./Edicion/edicion.html" class="btnEdicion" id="btn1">></a>
+              
+                </div>
+                
+                <div class="product">
+                    <div>
+                        <p>Proveedor: proveedornr1</p>
+                        <p>Total: $0000</p>
+                        <p>Fecha Entrega: 12/01/21</p>
+
+                    </div>
+                    <a href="./Edicion/edicion.html" class="btnEdicion" id="btn1">></a>
+                </div>
+                <div class="product">
+                    <div>
+                        <p>Proveedor: proveedornr1</p>
+                        <p>Total: $0000</p>
+                        <p>Fecha Entrega: 12/01/21</p>
+
+                    </div>
+                    <a href="./Edicion/edicion.html" class="btnEdicion" id="btn1">></a>
+                </div>
+                <div class="product">
+                    <div>
+                        <p>Proveedor: proveedornr1</p>
+                        <p>Total: $0000</p>
+                        <p>Fecha Entrega: 12/01/21</p>
+
+                    </div>
+                    <a href="./Edicion/edicion.html" class="btnEdicion" id="btn1">></a>
+                </div>
+                <div class="product">
+                    <div>
+                        <p>Proveedor: proveedornr1</p>
+                        <p>Total: $0000</p>
+                        <p>Fecha Entrega: 12/01/21</p>
+
+                    </div>
+                    <a href="./Edicion/edicion.html" class="btnEdicion" id="btn1">></a>
+                </div>
+                <div class="product">
+                    <div>
+                        <p>Proveedor: proveedornr1</p>
+                        <p>Total: $0000</p>
+                        <p>Fecha Entrega: 12/01/21</p>
+
+                    </div>
+                    <a href="./Edicion/edicion.html" class="btnEdicion" id="btn1">></a>
+                </div>
+                <div class="product">
+                    <div>
+                        <p>Proveedor: proveedornr1</p>
+                        <p>Total: $0000</p>
+                        <p>Fecha Entrega: 12/01/21</p>
+
+                    </div>
+                    <a href="./Edicion/edicion.html" class="btnEdicion" id="btn1">></a>
+                </div>
+
+
+            </div>
+            
+
+
+        </div>
+        <div class="container-right">
+            
+        <div class="orden">
+            <p>
+              <span>Proveedor</span>
+              <span>6 articles</span>
+            </p>
+            <p>$560.00</p>
+          </div>
+  
+             <div class="cartaproducto" id="encabezado">
+                 <p>Producto</p>
+                 <p>Cantidad</p>
+                 <p>Precio</p>
+                 <p>Importe</p>
+  
+             </div>
+  
+             <div class="listapedido">
+                 
+                   <div class="cartaproducto">
+                   
+                     <p>Huevo Grande</p>
+                     <p>20</p>
+                     <p>$30,00</p>
+                     <p>$60,00</p>
+  
+                     
+                   </div>
+           
+                   <div class="cartaproducto">
+                     
+                     <p>Huevo Grande</p>
+                     <p>20</p>
+                     <p>$30,00</p>
+                     <p>$60,00</p>
+                   </div>
+           
+                   <div class="cartaproducto">
+                     <p>Huevo Grande</p>
+                     <p>20</p>
+                     <p>$30,00</p>
+                     <p>$60,00</p>
+                   </div>
+                   <div class="cartaproducto">
+                     <p>Huevo Grande</p>
+                     <p>20</p>
+                     <p>$30,00</p>
+                     <p>$60,00</p>
+                   </div>
+                   <div class="cartaproducto">
+                     <p>Huevo Grande</p>
+                     <p>20</p>
+                     <p>$30,00</p>
+                     <p>$60,00</p>
+                   </div>
+  
+             </div>
+  
+        </div>
+
+
+    </div>
+
+</body>
+</html>

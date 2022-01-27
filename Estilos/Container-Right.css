@@ -1,14 +1,15 @@
 .container-right{
     border-radius: 8px;
         display: flex;
-        flex-direction: center;
+        flex-direction: column;
         justify-self: right;
         position: fixed;
         align-items: center;
         width: 350px;
-        height: 400px;
+        height: auto;
         background: papayawhip;
         margin-top: 74px;
+    
     
         
     }
