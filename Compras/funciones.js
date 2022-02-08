@@ -1,5 +1,7 @@
 
-    
+    import {NotaDePedido} from '../estructura';
+
+    let notasdepeidos = new NotaDePedido();
 
 function ClickAdd() {
 
