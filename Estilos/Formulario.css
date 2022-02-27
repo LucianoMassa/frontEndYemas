@@ -25,3 +25,14 @@
     margin-bottom: 12px;
     
   }
+  .input-mt{
+    width: 50px;
+    border-radius: 8px;
+    height: 28px;
+    margin-bottom: 12px;
+    
+  }
+
+  #maiz-cantidad {
+    margin-left: 90px;
+  }

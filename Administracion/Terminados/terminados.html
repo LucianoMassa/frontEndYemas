@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/Estilos/Formulario.css">
     <link rel="stylesheet" href="/Estilos/Container-Left.css">
     <link rel="stylesheet" href="/Estilos/Container-Right.css">
+    <link rel="stylesheet" href="/Estilos/Lista-Pedidos.css">
 </head>
 <body>
     <nav class="barra"> 
@@ -24,14 +25,17 @@
             
             <ul>
                 <li>
-                    <a href="/Administracion/Pedidos/pedidos.html">Notas de Pedidos</a>
+                    <a href="/Administracion/Terminados/terminados.html">Deposito</a>
+                </li>
+                <li>
+                    <a href="/Administracion/Pedidos/pedidos.html">Pedidos</a>
                 </li>
 
                 <li>
-                    <a href="/Administracion/Prima/prima.html">Materia Prima</a>
+                    <a href="/Administracion/Prima/prima.html">Producciones</a>
                 </li>
                 <li>
-                    <a href="/Administracion/Terminados/terminados.html">Deposito Produccion</a>
+                    <a href="/Administracion/Producidos/producidos.html">Terminados</a>
                 </li>
                 <li>
                     <a href="/Administracion/Envios/envios.html">Enviados</a>
@@ -57,47 +61,122 @@
         
 
             <div class="cartaproducto" id="encabezado">
-                <p>Producto</p>
-                <p>|</p>
-                <p>Cantidad</p>
- 
+                <h1>Materia Prima</h1>
+                <p>Deposito</p>
             </div>
- 
             <div class="listapedido">
+                    
+                <div class="cartaproducto">
                 
-                  <div class="cartaproducto">
+                  <label for="carton">Carton de Huevo</label>
+                  <input type="number" id="carton carton-cantidad" class="input-cantidad input-mt" placeholder="0">
                   
-                    <p>Huevo Grande</p>
-                    <p>|</p>
-                    <p>150</p>
- 
-                    
-                  </div>
-          
-                  <div class="cartaproducto">
-                    
-                    <p>Huevo Grande</p>
-                    <p>|</p>
-                    <p>150</p>
-                  </div>
-          
-                  <div class="cartaproducto">
-                    <p>Huevo Chico</p>
-                    <p>|</p>
-                    <p>250</p>
-                  </div>
-                  <div class="cartaproducto">
-                    <p>Huevo Mediano</p>
-                    <p>|</p>
-                    <p>450</p>
-                  </div>
-                  <div class="cartaproducto">
-                    <p>Huevo Grande</p>
-                    <p>|</p>
-                    <p>150</p>
-                  </div>
- 
+                </div>
+        
+                <div class="cartaproducto">
+
+                  <label for="carton2">Carton de Huevo</label>
+                  <input type="number" id="carton2 carton2-cantidad" class="input-cantidad input-mt" placeholder="0">
+
+                </div>
+        
+                <div class="cartaproducto">
+                 <label for="maiz">Maíz</label>
+                  <input type="number" id="maiz-cantidad" class="input-cantidad input-mt" placeholder="0">
+
+                </div>
+
+          </div>
+            <div class="cartaproducto" id="encabezado">
+                <h1>Productos</h1>
+                <p>Deposito</p>
             </div>
+            <div class="listapedido">
+                  
+                <div class="cartaproducto">
+                
+                  <label for="bolita">Huevo Bolita</label>
+                  <input type="number" id="bolita" class="input-cantidad input-mt" placeholder="0">
+                  
+                </div>
+        
+                <div class="cartaproducto">
+      
+                  <label for="cascado">Huevo Cascado</label>
+                  <input type="number" id="cascado" class="input-cantidad input-mt" placeholder="0">
+      
+                </div>
+        
+                <div class="cartaproducto">
+                 <label for="chico">Huevo Chico</label>
+                  <input type="number" id="chico" class="input-cantidad input-mt" placeholder="0">
+      
+                </div>
+      
+                <div class="cartaproducto">
+                    <label for="extra">Huevo Extra</label>
+                     <input type="number" id="extra" class="input-cantidad input-mt" placeholder="0">
+       
+                </div>
+      
+                <div class="cartaproducto">
+                <label for="grande">Huevo Grande</label>
+                     <input type="number" id="grande" class="input-cantidad input-mt" placeholder="0">
+       
+                </div>
+      
+                 <div class="cartaproducto">
+                    <label for="mediano">Huevo Mediano</label>
+                     <input type="number" id="mediano"class="input-cantidad input-mt" placeholder="0">
+       
+                 </div>
+      
+                <div class="cartaproducto">
+                    <label for="sucio">Huevo Sucio</label>
+                     <input type="number" id="sucio" class="input-cantidad input-mt" placeholder="0">
+       
+                </div>
+      
+                <div class="cartaproducto">
+                    <label for="super">Huevo Super</label>
+                     <input type="number" id="super" class="input-cantidad input-mt" placeholder="0">
+       
+                 </div>
+      
+          </div>
+          <div class="cartaproducto" id="encabezado">
+            <h1>Galpones</h1>
+            <p>En Proceso</p>
+        </div>
+        <div class="listapedido">
+                    
+            <div class="cartaproducto">
+            
+              <label for="galpon1">Azul Nr: 1</label>
+              <input type="number" id="galpon1" class="input-galpon1 input-mt" placeholder="0">
+              
+            </div>
+    
+            <div class="cartaproducto">
+
+                <label for="galpon2">Rojo Nr: 2</label>
+                <input type="number" id="galpon2" class="input-galpon2 input-mt" placeholder="0">
+                
+            </div>
+    
+            <div class="cartaproducto">
+                <label for="galpon3">Verde Nr: 3</label>
+                <input type="number" id="galpon3" class="input-galpon3 input-mt" placeholder="0">
+                
+            </div>
+            <div class="cartaproducto">
+
+                <label for="galpon4">Amarillo Nr: 4</label>
+                <input type="number" id="galpon4" class="input-galpon1 input-mt" placeholder="0">
+                
+            </div>
+
+      </div>
  
         </div>
 

@@ -17,6 +17,10 @@
        
       
 }
+.input-mt{
+
+  right: 0px;
+}
 
 
 
@@ -50,9 +54,10 @@
 
 
 .cartaproducto{
-    display: grid;
-    grid-template-columns: auto 1fr auto auto;
+    display: flex;
+    flex-direction: row;
     gap: 16px;
+    justify-content: space-between;
     margin-bottom: 24px;
     align-items: center;
     border-bottom: 1px solid var(--amarillo);

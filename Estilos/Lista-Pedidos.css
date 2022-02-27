@@ -1,6 +1,7 @@
 
 .lista-pedidos{
 
+   z-index: auto;
     border-radius: 8px;
     padding: 8px;
   }

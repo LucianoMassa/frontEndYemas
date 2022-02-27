@@ -60,19 +60,51 @@
 
                   
 
-                <label for="proveedor">Galpon</label>
-                   <input type="text"  id="proveedor" class="input-proveedor input" placeholder="color del galpon">
-
-                   <label for="producto">Producto</label>
-                   <input type="text"  id="producto" class="input-producto input" placeholder="nombre del producto">
-
-                   <label for="cantidad">Cantidad</label>
-                   <input type="number" id="cantidad" class="input-cantidad input" placeholder="cantidad">
-
-                   <input type="button" value="Add" class="button-add primary-button" id="agregarboton" onclick="ClickAdd()">
- 
+                <label for="galpon">Galpon</label>
+                   <input type="text"  id="galpon" class="input-galpon input" placeholder="Nro del galpon">
 
            </form>
+               
+       <div class="container-center">
+       
+       
+
+           <div class="cartaproducto" id="encabezado">
+               <p>Producto</p>
+               <p>Cantidad</p>
+
+
+           </div>
+
+           <div class="listapedido">
+                    
+            <div class="cartaproducto">
+            
+              <label for="carton">Carton de Huevo</label>
+              <input type="number" id="carton carton-cantidad" class="input-cantidad input-mt" placeholder="0">
+              
+            </div>
+    
+            <div class="cartaproducto">
+
+              <label for="carton2">Carton de Huevo</label>
+              <input type="number" id="carton2 carton2-cantidad" class="input-cantidad input-mt" placeholder="0">
+
+            </div>
+    
+            <div class="cartaproducto">
+             <label for="maiz">Maíz</label>
+              <input type="number" id="maiz-cantidad" class="input-cantidad input-mt" placeholder="0">
+
+            </div>
+
+      </div>
+
+      <label for="confirmar" ></label>
+                <input type="button" value="Confirmar" class="primary-button" onclick="ClickConfirm()">
+        
+       </div>
+
 
 
 

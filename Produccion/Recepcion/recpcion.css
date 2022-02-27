@@ -13,10 +13,11 @@
   display:  flex;
   margin-bottom: 12px;
   place-items: center;
-  position: relative;
+  
   
 }
 .product div{
+
     display:  flex;
     flex-direction: row;
     margin-bottom: 12px;

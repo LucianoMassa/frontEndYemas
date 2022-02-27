@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="/Estilos/Container-Center.css">
     <link rel="stylesheet" href="/Estilos/Lista-Productos.css">
     <link rel="stylesheet" href="/Estilos/Formulario.css">
-    
+    <link rel="stylesheet" href="/Estilos/Container-Left.css">
+    <link rel="stylesheet" href="/Estilos/Container-Right.css">
     
     <link rel="stylesheet" href="/Produccion/Recepcion/recpcion.css">
 </head>
@@ -25,18 +26,22 @@
             
             <ul>
                 <li>
-                    <a href="/Produccion/Recepcion/recepcion.html">Notas de Pedido</a>
+                    <a href="/Administracion/Terminados/terminados.html">Deposito</a>
                 </li>
                 <li>
-                    <a href="/Produccion/Proceso/proceso.html">Proceso</a>
+                    <a href="/Administracion/Pedidos/pedidos.html">Pedidos</a>
+                </li>
+
+                <li>
+                    <a href="/Administracion/Prima/prima.html">Producciones</a>
                 </li>
                 <li>
-                    <a href="/Produccion/Terminados/terminados.html">Productos 
-                        Terminados</a>
+                    <a href="/Administracion/Producidos/producidos.html">Terminados</a>
                 </li>
                 <li>
-                    <a href="/Produccion/Salida/salida.html">Envio</a>
+                    <a href="/Administracion/Envios/envios.html">Enviados</a>
                 </li>
+               
             </ul>
         </div>
 
@@ -50,13 +55,27 @@
         
 
     </nav>
-
     <div class="container">
+
        
+        
+        <div class="container-center">
+
+            <form action="/" class="form"> 
+    
+                <label for="fecha-entrega">Fecha de Confirmadas</label>
+                   <input type="date"  id="fecha-deposito" class="input-entrega input" >
+                 
+                   <input type="button" value="Confirmar" class="button-add primary-button" id="agregarboton" onclick="ClickAdd()">
+
+           </form>
+
+        </div>
+
         <div class="container-center">
 
           
-            <h1> Remitos de Compras</h1>
+            <h1> Remitos de Terminados</h1>
             
             <div class="lista-pedidos" >
 
@@ -135,54 +154,73 @@
 
 
         </div>
+
         <div class="container-center">
-       
-            <div class="orden">
-              <p>
-                <span>Proveedor</span>
-                <span>6 articles</span>
-              </p>
-              <p>$560.00</p>
-            </div>
-    
-               <div class="cartaproducto" id="encabezado">
-                   <p>Producto</p>
-                   <p>Cantidad</p>
-                   <p>Precio</p>
-    
-               </div>
-    
-               <div class="listapedido">
-                        
-                <div class="cartaproducto">
-                
-                  <label for="carton">Carton de Huevo</label>
-                  <input type="number" id="carton carton-cantidad" class="input-cantidad input-mt" placeholder="0">
-                  <input type="number" id="carton carton-precio" class="input-precio input-mt" placeholder="0">
-                  
-                </div>
-        
-                <div class="cartaproducto">
-    
-                  <label for="carton2">Carton de Huevo</label>
-                  <input type="number" id="carton2 carton2-cantidad" class="input-cantidad input-mt" placeholder="0">
-                  <input type="number" id="carton2 carton2-precio" class="input-precio input-mt" placeholder="0">
-    
-                </div>
-        
-                <div class="cartaproducto">
-                 <label for="maiz">Maíz</label>
-                  <input type="number" id="maiz-cantidad" class="input-cantidad input-mt" placeholder="0">
-                  <input type="number" id="maiz maiz-precio" class="input-precio input-mt" placeholder="0">
-    
-                </div>
-                
-          </div>
-    
-          <label for="confirmar" ></label>
-          <input type="button" value="Confirmar" class="primary-button" onclick="ClickConfirm()">
-  
+     
+     
+
+         <div class="cartaproducto" id="encabezado">
+             <p>Producto</p>
+             <p>Cantidad</p>
+
+
          </div>
+
+         <div class="listapedido">
+                  
+          <div class="cartaproducto">
+          
+            <label for="bolita">Huevo Bolita</label>
+            <input type="number" id="bolita" class="input-cantidad input-mt" placeholder="0">
+            
+          </div>
+  
+          <div class="cartaproducto">
+
+            <label for="cascado">Huevo Cascado</label>
+            <input type="number" id="cascado" class="input-cantidad input-mt" placeholder="0">
+
+          </div>
+  
+          <div class="cartaproducto">
+           <label for="chico">Huevo Chico</label>
+            <input type="number" id="chico" class="input-cantidad input-mt" placeholder="0">
+
+          </div>
+
+          <div class="cartaproducto">
+              <label for="extra">Huevo Extra</label>
+               <input type="number" id="extra" class="input-cantidad input-mt" placeholder="0">
+ 
+          </div>
+
+          <div class="cartaproducto">
+          <label for="grande">Huevo Grande</label>
+               <input type="number" id="grande" class="input-cantidad input-mt" placeholder="0">
+ 
+          </div>
+
+           <div class="cartaproducto">
+              <label for="mediano">Huevo Mediano</label>
+               <input type="number" id="mediano"class="input-cantidad input-mt" placeholder="0">
+ 
+           </div>
+
+          <div class="cartaproducto">
+              <label for="sucio">Huevo Sucio</label>
+               <input type="number" id="sucio" class="input-cantidad input-mt" placeholder="0">
+ 
+          </div>
+
+          <div class="cartaproducto">
+              <label for="super">Huevo Super</label>
+               <input type="number" id="super" class="input-cantidad input-mt" placeholder="0">
+ 
+           </div>
+
+    </div>
+
+     </div>
 
 
     </div>
