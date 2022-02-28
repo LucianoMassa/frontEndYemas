@@ -16,9 +16,6 @@
 </head>
 <body>
 
-<div id="app"></div>
-<script src="./index.js" type="module" ></script>
-
     <nav class="barra"> 
 
         <img src="/" alt="menu" class="menu">
@@ -51,14 +48,9 @@
         </div>
         
 
-    </nav>
-
-    
-
+    </nav> 
     <div class="container">
-        
         <div class="container-center">
-
             <form action="/" class="form"> 
 
                   
@@ -67,10 +59,7 @@
                     <input type="text"  id="proveedor" class="input-proveedor input" placeholder="nombre del Proveedor">
 
 
-            </form>
-
-            
-            
+            </form>       
             <div class="container-center">
 
                 <div class="cartaproducto" id="encabezado">
@@ -85,31 +74,29 @@
                       <div class="cartaproducto">
                       
                         <label for="carton">Carton de Huevo</label>
-                        <input type="number" id="carton carton-cantidad" class="input-cantidad input-mt" placeholder="0">
-                        <input type="number" id="carton carton-precio" class="input-precio input-mt" placeholder="0">
+                        <input type="text" id="carton-cantidad" class="input-cantidad input-mt" >
+                        <input type="text" id="carton-precio" class="input-precio input-mt" >
                         
                       </div>
               
                       <div class="cartaproducto">
 
                         <label for="carton2">Carton de Huevo</label>
-                        <input type="number" id="carton2 carton2-cantidad" class="input-cantidad input-mt" placeholder="0">
-                        <input type="number" id="carton2 carton2-precio" class="input-precio input-mt" placeholder="0">
+                        <input type="text" id="carton2-cantidad" class="input-cantidad input-mt" >
+                        <input type="text" id="carton2-precio" class="input-precio input-mt" >
   
                       </div>
               
                       <div class="cartaproducto">
                        <label for="maiz">Maíz</label>
-                        <input type="number" id="maiz-cantidad" class="input-cantidad input-mt" placeholder="0">
-                        <input type="number" id="maiz maiz-precio" class="input-precio input-mt" placeholder="0">
+                        <input type="text" id="maiz-cantidad" class="input-cantidad input-mt" >
+                        <input type="text" id="maiz-precio" class="input-precio input-mt" >
   
                       </div>
 
                 </div>
 
-                <label for="confirmar" ></label>
-                <input type="button" value="Confirmar" class="primary-button" onclick="ClickConfirm()">
-        
+                <button id="btn">Confirmar</button>
 
 
             </div>
@@ -123,6 +110,11 @@
 
     </div>
     
+
+    
+<div id="app"></div>
+<script src="./index.js" type="module" ></script>
+
 
 
 </body>
