@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="/Estilos/Container-Center.css">
     <link rel="stylesheet" href="/Estilos/Lista-Productos.css">
     <link rel="stylesheet" href="/Estilos/Formulario.css">
-    
+    <link rel="stylesheet" href="/Estilos/BotonPrincipal.css">
+
     
     <link rel="stylesheet" href="/Produccion/Recepcion/recpcion.css">
 </head>
@@ -79,14 +80,14 @@
 
         </div>
 
-        <div class="container-center">
+        <div   class="container-center">
        
             <div id= "ord" class="orden">
               <p>
-                <span>Proveedor</span>
-                <span>6 articles</span>
+                <div id="proveedor"></div>
+                
               </p>
-              <p>$560.00</p>
+             
             </div>
     
                <div class="cartaproducto" id="encabezado">
@@ -96,7 +97,7 @@
     
                </div>
     
-               <div class="listapedido">
+               <div id= "tpd" class="listapedido">
                         
                 <div class="cartaproducto">
                 
@@ -117,19 +118,49 @@
                 <div class="cartaproducto">
                  <label for="maiz">Maíz</label>
                   <input type="text" id="maiz-cantidad" class="input-cantidad input-mt" placeholder="0">
-                  <input type="text" id="maiz maiz-precio" class="input-precio input-mt" placeholder="0">
+                  <input type="text" id="maiz-precio" class="input-precio input-mt" placeholder="0">
     
                 </div>
                 
           </div>
-    
-          <button id="btn-mdf" >Modificar</button>
-          <button id="btn" >Confirmar</button>
+          
+          <button id="btn-mdf" class="primary-button">Modificar</button>
+          <button id="btn" class="primary-button" >Confirmar</button>
         </div>
 
 
     </div>
-    <script src="./index.js" type="module" ></script>
+
+    <script>
+        
+    function conectarApiGET(url){
+        
+    fetch(url,{
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        } 
+    })
+    .then((response)=> response.json())
+    .then(data => cargarNota(data));
+}
+   async function cargarNota(data){
+alert('Nota de pedido seleccionada');
+        document.getElementById('proveedor').innerText= `Proveedor: ${data.customer.name} - NOTA: ${data.id}   `;
+        document.getElementById('carton-cantidad').value = `${data.items[0].NotaProducto.cnt}`;
+        document.getElementById('carton2-cantidad').value = `${data.items[1].NotaProducto.cnt}`;
+        document.getElementById('maiz-cantidad').value = `${data.items[2].NotaProducto.cnt}`;
+        document.getElementById('carton-precio').value =`${data.items[0].NotaProducto.precio}`;
+        document.getElementById('carton2-precio').value  = `${data.items[1].NotaProducto.precio}`;
+        document.getElementById('maiz-precio').value = `${data.items[2].NotaProducto.precio}`;
+    
+}
+   
+   
+   </script>
+    <script src="./index.js" type="module" >
+        
+    </script>
 
 </body>
 </html>

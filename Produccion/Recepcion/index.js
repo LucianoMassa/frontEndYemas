@@ -1,11 +1,12 @@
 
 const URL_API = 'http://localhost:3000/api/v1/remitosCompras/Finalizar';
 const URL_API2 = 'http://localhost:3000/api/v1/notasdpds/Estado';
-//const URL_API = 'http://localhost:3000/api/v1/notasdpds/Finalizar';
+const URL_API3 = 'http://localhost:3000/api/v1/notasdpds';
 
+var modi= false;
 const xhr = new XMLHttpRequest();
 
- function onRequestHandler(){
+function onRequestHandler(){
         if(this.status === 200 && this.readyState === 4){
             /*
              
@@ -58,8 +59,11 @@ async function validar(){
     if(!proveedor){throw new Error('Campos incompletos');}
         
     const data ={
-    nota:{
-        customerId: proveedor
+    compra:{
+        customerId: proveedor,
+        numero : 213,
+        notaid: 1234,
+        modificacion: modi
     },
     items:[
         {
@@ -109,29 +113,41 @@ fetch(URL_API2,{
     })
     .then((response)=> response.json())
     .then((data)=>{
-
         const HTMLResponse = document.querySelector("#ltp");
-        const tpl = data.map(nota => 
-
-         ` <div class="product">
+        const tpl = data.map((nota) => 
+         `<div class="product">
         <div>
             <p>Proveedor: ${nota.customerId}</p>
             <p>ID: ${nota.id}</p>
-            <p>Fecha: ${Date(nota.createdAt).}</p>
+            <p>Fecha: ${nota.createdAt}</p>
         </div>
-  
-    </div>`);
+        <button id="btn" onclick='conectarApiGET("${URL_API3}/${nota.id}")'>></button>
+      
+    </div>`
+    );
         HTMLResponse.innerHTML = `<div> ${tpl} </div>`;
         
-    });
-
+    })
     
 
 
 }
 
+function visibilidad(){
+modi = !modi;
+document.getElementById("carton-cantidad").disabled = modi;
+document.getElementById("carton2-cantidad").disabled = modi;
+document.getElementById("maiz-cantidad").disabled = modi;
+document.getElementById("carton-precio").disabled = modi;
+document.getElementById("carton2-precio").disabled = modi;
+document.getElementById("maiz-precio").disabled = modi;
 
-console.log('Peticion devuelve '+conectarApiGET());
-const bnt = document.getElementById("btn");
- bnt.addEventListener('click',validar,true);
 
+}
+
+visibilidad();
+    console.log('Peticion devuelve '+conectarApiGET());
+    const bnt = document.getElementById("btn");
+    bnt.addEventListener('click',validar,true);
+    const bnt_mdf = document.getElementById("btn-mdf");
+    bnt_mdf.addEventListener('click',visibilidad,true);
