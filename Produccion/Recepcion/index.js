@@ -1,7 +1,9 @@
-const URL_API = 'http://localhost:3000/api/v1/notasdpds/Finalizar';
+
+const URL_API = 'http://localhost:3000/api/v1/remitosCompras/Finalizar';
+const URL_API2 = 'http://localhost:3000/api/v1/notasdpds/Estado';
+//const URL_API = 'http://localhost:3000/api/v1/notasdpds/Finalizar';
+
 const xhr = new XMLHttpRequest();
-
-
 
  function onRequestHandler(){
         if(this.status === 200 && this.readyState === 4){
@@ -99,8 +101,7 @@ async function validar(){
 
 function conectarApiGET(){
 
-
-fetch(URL_API,{
+fetch(URL_API2,{
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -108,13 +109,29 @@ fetch(URL_API,{
     })
     .then((response)=> response.json())
     .then((data)=>{
-        console.log(data);
-        debugger
-    })
+
+        const HTMLResponse = document.querySelector("#ltp");
+        const tpl = data.map(nota => 
+
+         ` <div class="product">
+        <div>
+            <p>Proveedor: ${nota.customerId}</p>
+            <p>ID: ${nota.id}</p>
+            <p>Fecha: ${Date(nota.createdAt).}</p>
+        </div>
+  
+    </div>`);
+        HTMLResponse.innerHTML = `<div> ${tpl} </div>`;
+        
+    });
+
+    
 
 
 }
 
+
+console.log('Peticion devuelve '+conectarApiGET());
 const bnt = document.getElementById("btn");
  bnt.addEventListener('click',validar,true);
 
