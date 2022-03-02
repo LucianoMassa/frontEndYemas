@@ -83,21 +83,30 @@
         <div   class="container-center">
        
             <div id= "ord" class="orden">
-              <p>
-                <div id="proveedor"></div>
-                
-              </p>
+              
+                <label for="proveedorname">Proveedor</label>
+                <input type="text" id="proveedorname" class="input-cantidad input-mt" placeholder="">
+
+                <label for="proveedor">ID:</label>
+                <input type="text" id="proveedor" class="input-cantidad input-mt" placeholder="0">
+                  
+                <label for="notaid">Nota</label>
+                <input type="text" id="notaid" class="input-cantidad input-mt" placeholder="0">
+                  
+                <label for="numero">Numero del Remito</label>
+                <input type="text" id="numero" class="input-cantidad input-mt" placeholder="0">
+                             
              
             </div>
-    
-               <div class="cartaproducto" id="encabezado">
+
+          <div class="cartaproducto" id="encabezado">
                    <p>Producto</p>
                    <p>Cantidad</p>
                    <p>Precio</p>
     
-               </div>
+          </div>
     
-               <div id= "tpd" class="listapedido">
+          <div id= "tpd" class="listapedido">
                         
                 <div class="cartaproducto">
                 
@@ -145,8 +154,10 @@
     .then(data => cargarNota(data));
 }
    async function cargarNota(data){
-alert('Nota de pedido seleccionada');
-        document.getElementById('proveedor').innerText= `Proveedor: ${data.customer.name} - NOTA: ${data.id}   `;
+        alert('Nota de pedido seleccionada');
+        document.getElementById('proveedorname').value= `${data.customer.name}`;
+        document.getElementById('proveedor').value= `${data.customerId}`;
+        document.getElementById('notaid').value= `${data.id}`;
         document.getElementById('carton-cantidad').value = `${data.items[0].NotaProducto.cnt}`;
         document.getElementById('carton2-cantidad').value = `${data.items[1].NotaProducto.cnt}`;
         document.getElementById('maiz-cantidad').value = `${data.items[2].NotaProducto.cnt}`;

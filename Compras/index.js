@@ -47,13 +47,13 @@ async function validar(){
     const carton2_prc = Number(document.getElementById('carton-precio').value);
     const maiz_prc = Number(document.getElementById('maiz-precio').value);
     
-    if(!carton_cnt){ throw new Error('Campos incompletos'); }
-    if(!carton2_cnt){throw new Error('Campos incompletos');}
-    if(!maiz_cnt){throw new Error('Campos incompletos');}
-    if(!carton_prc){throw new Error('Campos incompletos');}
-    if(!carton2_prc){throw new Error('Campos incompletos');}
-    if(!maiz_prc){throw new Error('Campos incompletos');}
-    if(!proveedor){throw new Error('Campos incompletos');}
+    if(!carton_cnt){ alert('Campos incompletos'); throw new Error('Campos incompletos'); }
+    if(!carton2_cnt){alert('Campos incompletos'); throw new Error('Campos incompletos');}
+    if(!maiz_cnt){alert('Campos incompletos'); throw new Error('Campos incompletos');}
+    if(!carton_prc){alert('Campos incompletos'); throw new Error('Campos incompletos');}
+    if(!carton2_prc){alert('Campos incompletos'); throw new Error('Campos incompletos');}
+    if(!maiz_prc){alert('Campos incompletos'); throw new Error('Campos incompletos');}
+    if(!proveedor){alert('Campos incompletos'); throw new Error('Campos incompletos');}
         
     const data ={
     nota:{

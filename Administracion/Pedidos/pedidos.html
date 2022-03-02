@@ -62,144 +62,117 @@
 
             <form action="/" class="form"> 
     
-                <label for="fecha-entrega">Fecha de Confirmadas</label>
-                   <input type="date"  id="fecha-deposito" class="input-entrega input" >
+                <label for="fecha">Fecha de Confirmadas</label>
+                 <input type="date"  id="fecha" class="input-entrega input" >
                  
-                   <input type="button" value="Confirmar" class="button-add primary-button" id="agregarboton" onclick="ClickAdd()">
-
+                
+                   
            </form>
-
+           <button id="btn-fecha">Buscar</button>
         </div>
         <div class="container-center">
 
           
             <h1> Remitos de Compras</h1>
             
-            <div class="lista-pedidos" >
-
+            <div id= "ltp" class="lista-pedidos" >
+ 
                 
-                <div class="product">
-                    <div>
-                        <p>Proveedor: proveedornr1</p>
-                        <p>Total: $0000</p>
-                        <p>Fecha Entrega: 12/01/21</p>
-
-                    </div>
-
-                
-                  <a href="" class="btnEdicion" id="btn1">></a>
-              
-                </div>
-                
-                <div class="product">
-                    <div>
-                        <p>Proveedor: proveedornr1</p>
-                        <p>Total: $0000</p>
-                        <p>Fecha Entrega: 12/01/21</p>
-
-                    </div>
-                    <a href="" class="btnEdicion" id="btn1">></a>
-                </div>
-                <div class="product">
-                    <div>
-                        <p>Proveedor: proveedornr1</p>
-                        <p>Total: $0000</p>
-                        <p>Fecha Entrega: 12/01/21</p>
-
-                    </div>
-                    <a href="" class="btnEdicion" id="btn1">></a>
-                </div>
-                <div class="product">
-                    <div>
-                        <p>Proveedor: proveedornr1</p>
-                        <p>Total: $0000</p>
-                        <p>Fecha Entrega: 12/01/21</p>
-
-                    </div>
-                    <a href="" class="btnEdicion" id="btn1">></a>
-                </div>
-                <div class="product">
-                    <div>
-                        <p>Proveedor: proveedornr1</p>
-                        <p>Total: $0000</p>
-                        <p>Fecha Entrega: 12/01/21</p>
-
-                    </div>
-                    <a href="" class="btnEdicion" id="btn1">></a>
-                </div>
-                <div class="product">
-                    <div>
-                        <p>Proveedor: proveedornr1</p>
-                        <p>Total: $0000</p>
-                        <p>Fecha Entrega: 12/01/21</p>
-
-                    </div>
-                    <a href="" class="btnEdicion" id="btn1">></a>
-                </div>
-                <div class="product">
-                    <div>
-                        <p>Proveedor: proveedornr1</p>
-                        <p>Total: $0000</p>
-                        <p>Fecha Entrega: 12/01/21</p>
-
-                    </div>
-                    <a href="" class="btnEdicion" id="btn1">></a>
-                </div>
-
 
             </div>
             
 
 
         </div>
-        <div class="container-center">
+        <div   class="container-center">
        
-            <div class="orden">
-              <p>
-                <span>Proveedor</span>
-                <span>6 articles</span>
-              </p>
-              <p>$560.00</p>
+            <div id= "ord" class="orden">
+              
+                <label for="proveedorname">Proveedor</label>
+                <input type="text" id="proveedorname" class="input-cantidad input-mt" placeholder="">
+
+                <label for="proveedor">ID:</label>
+                <input type="text" id="proveedor" class="input-cantidad input-mt" placeholder="0">
+                  
+                <label for="notaid">Nota</label>
+                <input type="text" id="notaid" class="input-cantidad input-mt" placeholder="0">
+                  
+                <label for="numero">Numero del Remito</label>
+                <input type="text" id="numero" class="input-cantidad input-mt" placeholder="0">
+                             
+             
             </div>
-    
-               <div class="cartaproducto" id="encabezado">
+
+          <div class="cartaproducto" id="encabezado">
                    <p>Producto</p>
                    <p>Cantidad</p>
                    <p>Precio</p>
     
-               </div>
+          </div>
     
-               <div class="listapedido">
+          <div id= "tpd" class="listapedido">
                         
                 <div class="cartaproducto">
                 
                   <label for="carton">Carton de Huevo</label>
-                  <input type="number" id="carton carton-cantidad" class="input-cantidad input-mt" placeholder="0">
-                  <input type="number" id="carton carton-precio" class="input-precio input-mt" placeholder="0">
+                  <input type="text" id="carton-cantidad" class="input-cantidad input-mt" placeholder="0">
+                  <input type="text" id="carton-precio" class="input-precio input-mt" placeholder="0">
                   
                 </div>
         
                 <div class="cartaproducto">
     
                   <label for="carton2">Carton de Huevo</label>
-                  <input type="number" id="carton2 carton2-cantidad" class="input-cantidad input-mt" placeholder="0">
-                  <input type="number" id="carton2 carton2-precio" class="input-precio input-mt" placeholder="0">
+                  <input type="text" id="carton2-cantidad" class="input-cantidad input-mt" placeholder="0">
+                  <input type="text" id="carton2-precio" class="input-precio input-mt" placeholder="0">
     
                 </div>
         
                 <div class="cartaproducto">
                  <label for="maiz">Maíz</label>
-                  <input type="number" id="maiz-cantidad" class="input-cantidad input-mt" placeholder="0">
-                  <input type="number" id="maiz maiz-precio" class="input-precio input-mt" placeholder="0">
+                  <input type="text" id="maiz-cantidad" class="input-cantidad input-mt" placeholder="0">
+                  <input type="text" id="maiz-precio" class="input-precio input-mt" placeholder="0">
     
                 </div>
-    
+                
           </div>
-    
-           </div>
+          
+          <button id="btn-mdf" class="primary-button">Modificar</button>
+          <button id="btn" class="primary-button" >Confirmar</button>
+        </div>
 
 
     </div>
+    <script>
+        
+        function conectarApiGET(url){
+            
+        fetch(url,{
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            } 
+        })
+        .then((response)=> response.json())
+        .then(data => cargarNota(data));
+    }
+       async function cargarNota(data){
+            alert('Nota de pedido seleccionada');
+            document.getElementById('proveedorname').value= `${data.customer.name}`;
+            document.getElementById('proveedor').value= `${data.customerId}`;
+            document.getElementById('notaid').value= `${data.id}`;
+            document.getElementById('carton-cantidad').value = `${data.items[0].NotaProducto.cnt}`;
+            document.getElementById('carton2-cantidad').value = `${data.items[1].NotaProducto.cnt}`;
+            document.getElementById('maiz-cantidad').value = `${data.items[2].NotaProducto.cnt}`;
+            document.getElementById('carton-precio').value =`${data.items[0].NotaProducto.precio}`;
+            document.getElementById('carton2-precio').value  = `${data.items[1].NotaProducto.precio}`;
+            document.getElementById('maiz-precio').value = `${data.items[2].NotaProducto.precio}`;
+        
+    }
+       
+       
+       </script>
+    <script src="./index.js" type="module"></script>
 
 </body>
 </html>
