@@ -13,8 +13,9 @@
     <link rel="stylesheet" href="/Estilos/Formulario.css">
     <link rel="stylesheet" href="/Estilos/Container-Left.css">
     <link rel="stylesheet" href="/Estilos/Container-Right.css">
-    
     <link rel="stylesheet" href="/Produccion/Recepcion/recpcion.css">
+    <link rel="stylesheet" href="/Estilos/BotonPrincipal.css">
+
 </head>
 <body>
     <nav class="barra"> 
@@ -63,167 +64,98 @@
 
             <form action="/" class="form"> 
     
-                <label for="fecha-entrega">Fecha de Confirmadas</label>
-                   <input type="date"  id="fecha-deposito" class="input-entrega input" >
+                <label for="fecha">Fecha de Confirmadas</label>
+                 <input type="date"  id="fecha" class="input-entrega input" >
                  
-                   <input type="button" value="Confirmar" class="button-add primary-button" id="agregarboton" onclick="ClickAdd()">
-
+                
+                   
            </form>
-
+           <button id="btn-fecha" class="primary-button">Buscar</button>
         </div>
-
         <div class="container-center">
 
           
-            <h1> Remitos de Terminados</h1>
+            <h1> Remitos Terminados</h1>
             
-            <div class="lista-pedidos" >
-
+            <div id= "ltp" class="lista-pedidos" >
+ 
                 
-                <div class="product">
-                    <div>
-                        <p>Proveedor: proveedornr1</p>
-                        <p>Total: $0000</p>
-                        <p>Fecha Entrega: 12/01/21</p>
-
-                    </div>
-
-                
-                  <a href="" class="btnEdicion" id="btn1">></a>
-              
-                </div>
-                
-                <div class="product">
-                    <div>
-                        <p>Proveedor: proveedornr1</p>
-                        <p>Total: $0000</p>
-                        <p>Fecha Entrega: 12/01/21</p>
-
-                    </div>
-                    <a href="" class="btnEdicion" id="btn1">></a>
-                </div>
-                <div class="product">
-                    <div>
-                        <p>Proveedor: proveedornr1</p>
-                        <p>Total: $0000</p>
-                        <p>Fecha Entrega: 12/01/21</p>
-
-                    </div>
-                    <a href="" class="btnEdicion" id="btn1">></a>
-                </div>
-                <div class="product">
-                    <div>
-                        <p>Proveedor: proveedornr1</p>
-                        <p>Total: $0000</p>
-                        <p>Fecha Entrega: 12/01/21</p>
-
-                    </div>
-                    <a href="" class="btnEdicion" id="btn1">></a>
-                </div>
-                <div class="product">
-                    <div>
-                        <p>Proveedor: proveedornr1</p>
-                        <p>Total: $0000</p>
-                        <p>Fecha Entrega: 12/01/21</p>
-
-                    </div>
-                    <a href="" class="btnEdicion" id="btn1">></a>
-                </div>
-                <div class="product">
-                    <div>
-                        <p>Proveedor: proveedornr1</p>
-                        <p>Total: $0000</p>
-                        <p>Fecha Entrega: 12/01/21</p>
-
-                    </div>
-                    <a href="" class="btnEdicion" id="btn1">></a>
-                </div>
-                <div class="product">
-                    <div>
-                        <p>Proveedor: proveedornr1</p>
-                        <p>Total: $0000</p>
-                        <p>Fecha Entrega: 12/01/21</p>
-
-                    </div>
-                    <a href="" class="btnEdicion" id="btn1">></a>
-                </div>
-
 
             </div>
             
 
 
         </div>
+        <div   class="container-center">
+       
+            <div id= "ord" class="orden">
+              
+                <label for="galpon">Galpon</label>
+                <input type="text" id="galpon" class="input-cantidad input-mt" placeholder="">
 
-        <div class="container-center">
-     
-     
-
-         <div class="cartaproducto" id="encabezado">
-             <p>Producto</p>
-             <p>Cantidad</p>
-
-
-         </div>
-
-         <div class="listapedido">
+                <label for="galponnro">Nro:</label>
+                <input type="text" id="galponnro" class="input-cantidad input-mt" placeholder="0">
                   
-          <div class="cartaproducto">
-          
-            <label for="bolita">Huevo Bolita</label>
-            <input type="number" id="bolita" class="input-cantidad input-mt" placeholder="0">
+                <label for="producidonId">Remito Nro</label>
+                <input type="text" id="producidoId" class="input-cantidad input-mt" placeholder="0">
+               
+             
+            </div>
+
+          <div class="cartaproducto" id="encabezado">
+                   <p>Producto</p>
+                   <p>Cantidad</p>
+                   <p>Precio</p>
+    
+          </div>
+    
+          <div id="listaProductos" class="listapedido">
+                  
             
-          </div>
   
-          <div class="cartaproducto">
-
-            <label for="cascado">Huevo Cascado</label>
-            <input type="number" id="cascado" class="input-cantidad input-mt" placeholder="0">
-
-          </div>
-  
-          <div class="cartaproducto">
-           <label for="chico">Huevo Chico</label>
-            <input type="number" id="chico" class="input-cantidad input-mt" placeholder="0">
-
-          </div>
-
-          <div class="cartaproducto">
-              <label for="extra">Huevo Extra</label>
-               <input type="number" id="extra" class="input-cantidad input-mt" placeholder="0">
- 
-          </div>
-
-          <div class="cartaproducto">
-          <label for="grande">Huevo Grande</label>
-               <input type="number" id="grande" class="input-cantidad input-mt" placeholder="0">
- 
-          </div>
-
-           <div class="cartaproducto">
-              <label for="mediano">Huevo Mediano</label>
-               <input type="number" id="mediano"class="input-cantidad input-mt" placeholder="0">
- 
-           </div>
-
-          <div class="cartaproducto">
-              <label for="sucio">Huevo Sucio</label>
-               <input type="number" id="sucio" class="input-cantidad input-mt" placeholder="0">
- 
-          </div>
-
-          <div class="cartaproducto">
-              <label for="super">Huevo Super</label>
-               <input type="number" id="super" class="input-cantidad input-mt" placeholder="0">
- 
-           </div>
-
-    </div>
-
-     </div>
+             </div>
+          
+        </div>
 
 
     </div>
+    <script>
+        
+        function conectarApiGET(url){
+            
+        fetch(url,{
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            } 
+        })
+        .then((response)=> response.json())
+        .then(data => cargarNota(data));
+    }
+       async function cargarNota(data){
+            alert('Remito Terminado seleccionado');
+            
+            document.getElementById('galpon').value= `${data.galpon.nombre}`;
+            document.getElementById('galponnro').value= `${data.galponId}`;
+            document.getElementById('producidoId').value= `${data.id}`;
+            
+            const HTMLResponse = document.querySelector("#listaProductos");
+            const tpl = data.items.map((producto) => 
+              `<div class="cartaproducto">
+
+                <label for="super">${producto.nombre}</label>
+                 <input type="number" id="super" value="${producto.ProducidoProducto.cnt}" class="input-cantidad input-mt" placeholder="0">
+   
+             </div>`
+            );
+            HTMLResponse.innerHTML = `<div> ${tpl} </div>`;
+
+            
+    }
+       
+       
+       </script>
+    <script src="./index.js" type="module"></script>
 
 </body>
 </html>

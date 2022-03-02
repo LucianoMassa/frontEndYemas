@@ -99,7 +99,10 @@
                   
                 <label for="numero">Numero del Remito</label>
                 <input type="text" id="numero" class="input-cantidad input-mt" placeholder="0">
-                             
+                     
+                <label for="modificada">Modificada</label>
+                <input type="text" id="modificada" class="input-cantidad input-mt" placeholder="0">
+                   
              
             </div>
 
@@ -110,35 +113,14 @@
     
           </div>
     
-          <div id= "tpd" class="listapedido">
+          <div id= "listaProductos" class="listapedido">
                         
-                <div class="cartaproducto">
                 
-                  <label for="carton">Carton de Huevo</label>
-                  <input type="text" id="carton-cantidad" class="input-cantidad input-mt" placeholder="0">
-                  <input type="text" id="carton-precio" class="input-precio input-mt" placeholder="0">
-                  
-                </div>
         
-                <div class="cartaproducto">
-    
-                  <label for="carton2">Carton de Huevo</label>
-                  <input type="text" id="carton2-cantidad" class="input-cantidad input-mt" placeholder="0">
-                  <input type="text" id="carton2-precio" class="input-precio input-mt" placeholder="0">
-    
-                </div>
-        
-                <div class="cartaproducto">
-                 <label for="maiz">Maíz</label>
-                  <input type="text" id="maiz-cantidad" class="input-cantidad input-mt" placeholder="0">
-                  <input type="text" id="maiz-precio" class="input-precio input-mt" placeholder="0">
-    
-                </div>
+                
                 
           </div>
           
-          <button id="btn-mdf" class="primary-button">Modificar</button>
-          <button id="btn" class="primary-button" >Confirmar</button>
         </div>
 
 
@@ -157,17 +139,27 @@
         .then(data => cargarNota(data));
     }
        async function cargarNota(data){
-            alert('Nota de pedido seleccionada');
+            alert('Compra seleccionada');
+            let band = 'No';
+            if(data.modificacion===true){
+                band = 'Si';
+            }
+            document.getElementById('numero').value= `${data.numero}`;
+            document.getElementById('modificada').value= `${band}`;
             document.getElementById('proveedorname').value= `${data.customer.name}`;
-            document.getElementById('proveedor').value= `${data.customerId}`;
-            document.getElementById('notaid').value= `${data.id}`;
-            document.getElementById('carton-cantidad').value = `${data.items[0].NotaProducto.cnt}`;
-            document.getElementById('carton2-cantidad').value = `${data.items[1].NotaProducto.cnt}`;
-            document.getElementById('maiz-cantidad').value = `${data.items[2].NotaProducto.cnt}`;
-            document.getElementById('carton-precio').value =`${data.items[0].NotaProducto.precio}`;
-            document.getElementById('carton2-precio').value  = `${data.items[1].NotaProducto.precio}`;
-            document.getElementById('maiz-precio').value = `${data.items[2].NotaProducto.precio}`;
-        
+            document.getElementById('proveedor').value= `${data.id}`;
+            document.getElementById('notaid').value= `${data.notaid}`;
+      
+            const HTMLResponse = document.querySelector("#listaProductos");
+            const tpl = data.items.map((producto) => 
+              `<div class="cartaproducto">
+
+                <label for="super">${producto.nombre}</label>
+                 <input type="number" id="super" value="${producto.CompraProducto.cnt}" class="input-cantidad input-mt" placeholder="0">
+   
+             </div>`
+            );
+            HTMLResponse.innerHTML = `<div> ${tpl} </div>`;
     }
        
        

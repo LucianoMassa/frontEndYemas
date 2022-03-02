@@ -1,6 +1,6 @@
 
-const URL_API = 'http://localhost:3000/api/v1/remitosCompras';
-const URL_API2 = 'http://localhost:3000/api/v1/remitosCompras/BuscarporFecha';
+const URL_API = 'http://localhost:3000/api/v1/remitosEnvios';
+const URL_API2 = 'http://localhost:3000/api/v1/remitosEnvios/BuscarporFecha';
 
 function conectarApiGET(url){
 
@@ -14,14 +14,14 @@ fetch(url,{
     .then((response)=> response.json())
     .then((data)=>{
         const HTMLResponse = document.querySelector("#ltp");
-        const tpl = data.map((compra) => 
+        const tpl = data.map((producido) => 
          `<div class="product">
         <div>
-            <p>Proveedor: ${compra.id}</p>
+            <p>Camion: ${producido.galponId}</p>
             
-            <p>Fecha: ${compra.createdAt}</p>
+            <p>Fecha: ${producido.createdAt}</p>
         </div>
-        <button id="btn" onclick='conectarApiGET("${URL_API}/${compra.id}")'>></button>
+        <button id="btn" onclick='conectarApiGET("${URL_API}/${producido.id}")'>></button>
       
     </div>`
     );
