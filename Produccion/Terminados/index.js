@@ -1,4 +1,4 @@
-const URL_API = 'http://localhost:3000/api/v1/remitosProducido/Finalizar';
+const URL_API = 'https://tranquil-thicket-16476.herokuapp.com/api/v1/remitosProducido/Finalizar';
 
 async function conectarApiPOST(data){
     
@@ -14,28 +14,36 @@ async function conectarApiPOST(data){
   return true;
 }
 async function validar(){
-    const galpon = Number(document.getElementById('galpon').value);
-    const bolita = Number(document.getElementById('bolita').value);
-    const cascado = Number(document.getElementById('cascado').value);
-    const chico = Number(document.getElementById('chico').value);
-    const extra = Number(document.getElementById('extra').value);
-    const grande = Number(document.getElementById('grande').value);
-    const mediano = Number(document.getElementById('mediano').value);
-    const sucio = Number(document.getElementById('sucio').value);
-    const superx = Number(document.getElementById('super').value);
+    let galpon = Number(document.getElementById('galpon').value);
+    let bolita = Number(document.getElementById('bolita').value);
+    let cascado = Number(document.getElementById('cascado').value);
+    let chico = Number(document.getElementById('chico').value);
+    let extra = Number(document.getElementById('extra').value);
+    let grande = Number(document.getElementById('grande').value);
+    let mediano = Number(document.getElementById('mediano').value);
+    let sucio = Number(document.getElementById('sucio').value);
+    let superx = Number(document.getElementById('super').value);
     
-    if(!galpon){ throw new Error('Campos incompletos'); }
+    if(!galpon){alert('Nro de galpon incorrecto'); throw new Error('Campos incompletos'); }
     if(galpon > 0){ 
-        if (galpon > 4){throw new Error('Campos incompletos');}
-         }else{throw new Error('Campos incompletos');}
-    if(!bolita){throw new Error('Campos bolita incompletos');}
-    if(!cascado){throw new Error('Campos cascado incompletos');}
-    if(!chico){throw new Error('Campos chico incompletos');}
-    if(!extra){throw new Error('Campos extra incompletos');}
-    if(!grande){throw new Error('Campos grande incompletos');}
-    if(!mediano){throw new Error('Campos mediano incompletos');}
-    if(!sucio){throw new Error('Campos sucio incompletos');}
-    if(!superx){throw new Error('Campos super incompletos');}
+        if (galpon > 4){alert('Nro de galpon incorrecto'); throw new Error('Campos incompletos');}
+         }else{alert('Nro de galpon incorrecto'); throw new Error('Campos incompletos');}
+    if(!bolita){if(document.getElementById('bolita').value==0){bolita=0;}else{
+        alert('Campo/s mal cargado');throw new Error('Campos bolita incompletos');}}
+    if(!cascado){if(document.getElementById('cascado').value==0){cascado=0;}else{
+        alert('Campo/s mal cargado'); throw new Error('Campos cascado incompletos');}}
+    if(!chico){if(document.getElementById('chico').value==0){chico=0;}else{
+        alert('Campo/s mal cargado'); throw new Error('Campos chico incompletos');}}
+    if(!extra){if(document.getElementById('extra').value==0){extra=0;}else{
+        alert('Campo/s mal cargado'); throw new Error('Campos extra incompletos');}}
+    if(!grande){if(document.getElementById('grande').value==0){grande=0;}else{
+        alert('Campo/s mal cargado'); throw new Error('Campos grande incompletos');}}
+    if(!mediano){if(document.getElementById('mediano').value==0){mediano=0;}else{
+        alert('Campo/s mal cargado'); throw new Error('Campos mediano incompletos');}}
+    if(!sucio){if(document.getElementById('sucio').value==0){sucio=0;}else{
+        alert('Campo/s mal cargado'); throw new Error('Campos sucio incompletos');}}
+    if(!superx){if(document.getElementById('super').value==0){superx=0;}else{
+        alert('Campo/s mal cargado'); throw new Error('Campos super incompletos');}}
 
     const data ={
     producido:{
@@ -59,7 +67,7 @@ async function validar(){
     const res =  conectarApiPOST(data);
 
     if(res){
-        alert('Nota de pedido Exitosa');
+        alert('Remito Producido Exitosamente');
         document.getElementById('galpon').value= '';
         document.getElementById('bolita').value = '';
         document.getElementById('cascado').value = '';

@@ -1,7 +1,7 @@
 
-const URL_API = 'http://localhost:3000/api/v1/categories';
-const URL_API2 = 'http://localhost:3000/api/v1/galpones';
-const URL_API3 = 'http://localhost:3000/api/v1/productos';
+const URL_API = 'https://tranquil-thicket-16476.herokuapp.com/api/v1/categories';
+const URL_API2 = 'https://tranquil-thicket-16476.herokuapp.com/api/v1/galpones';
+const URL_API3 = 'https://tranquil-thicket-16476.herokuapp.com/api/v1/productos';
 
 
 

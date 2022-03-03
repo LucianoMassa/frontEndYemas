@@ -1,4 +1,4 @@
-const URL_API = 'http://localhost:3000/api/v1/remitosEnvios/Finalizar';
+const URL_API = 'https://tranquil-thicket-16476.herokuapp.com/api/v1/remitosEnvios/Finalizar';
 
 async function conectarApiPOST(data){
     
@@ -14,29 +14,36 @@ async function conectarApiPOST(data){
   return true;
 }
 async function validar(){
-    const camionero = Number(document.getElementById('camionero').value);
-    const bolita = Number(document.getElementById('bolita').value);
-    const cascado = Number(document.getElementById('cascado').value);
-    const chico = Number(document.getElementById('chico').value);
-    const extra = Number(document.getElementById('extra').value);
-    const grande = Number(document.getElementById('grande').value);
-    const mediano = Number(document.getElementById('mediano').value);
-    const sucio = Number(document.getElementById('sucio').value);
-    const superx = Number(document.getElementById('super').value);
+    let camionero = Number(document.getElementById('camionero').value);
+    let bolita = Number(document.getElementById('bolita').value);
+    let cascado = Number(document.getElementById('cascado').value);
+    let chico = Number(document.getElementById('chico').value);
+    let extra = Number(document.getElementById('extra').value);
+    let grande = Number(document.getElementById('grande').value);
+    let mediano = Number(document.getElementById('mediano').value);
+    let sucio = Number(document.getElementById('sucio').value);
+    let superx = Number(document.getElementById('super').value);
     
-    if(!camionero){ alert('Campo Incompleto'); throw new Error('Campos incompletos'); }
+    if(!camionero){ alert('Campo traslado Incompleto'); throw new Error('Campos incompletos'); }
     if(camionero > 0){ 
         if (camionero > 4){alert('Nro Camionero Error'); throw new Error('Nro Camionero Error');}
          }else{alert('Nro Camionero Error'); throw new Error('Nro Camionero Error');}
-    if(!bolita){alert('Campo Incompleto'); throw new Error('Campos bolita incompletos');}
-    if(!cascado){alert('Campo Incompleto'); throw new Error('Campos cascado incompletos');}
-    if(!chico){alert('Campo Incompleto'); throw new Error('Campos chico incompletos');}
-    if(!extra){alert('Campo Incompleto'); throw new Error('Campos extra incompletos');}
-    if(!grande){alert('Campo Incompleto'); throw new Error('Campos grande incompletos');}
-    if(!mediano){alert('Campo Incompleto'); throw new Error('Campos mediano incompletos');}
-    if(!sucio){alert('Campo Incompleto'); throw new Error('Campos sucio incompletos');}
-    if(!superx){alert('Campo Incompleto'); throw new Error('Campos super incompletos');}
-
+     if(!bolita){if(document.getElementById('bolita').value==0){bolita=0;}else{
+             alert('Campo/s mal cargado');throw new Error('Campos bolita incompletos');}}
+         if(!cascado){if(document.getElementById('cascado').value==0){cascado=0;}else{
+             alert('Campo/s mal cargado'); throw new Error('Campos cascado incompletos');}}
+         if(!chico){if(document.getElementById('chico').value==0){chico=0;}else{
+             alert('Campo/s mal cargado'); throw new Error('Campos chico incompletos');}}
+         if(!extra){if(document.getElementById('extra').value==0){extra=0;}else{
+             alert('Campo/s mal cargado'); throw new Error('Campos extra incompletos');}}
+         if(!grande){if(document.getElementById('grande').value==0){grande=0;}else{
+             alert('Campo/s mal cargado'); throw new Error('Campos grande incompletos');}}
+         if(!mediano){if(document.getElementById('mediano').value==0){mediano=0;}else{
+             alert('Campo/s mal cargado'); throw new Error('Campos mediano incompletos');}}
+         if(!sucio){if(document.getElementById('sucio').value==0){sucio=0;}else{
+             alert('Campo/s mal cargado'); throw new Error('Campos sucio incompletos');}}
+         if(!superx){if(document.getElementById('super').value==0){superx=0;}else{
+             alert('Campo/s mal cargado'); throw new Error('Campos super incompletos');}}
     const data ={
     envio:{
 

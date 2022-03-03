@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administracion</title>
+    <title>Produccion</title>
     <link rel="stylesheet" href="/Estilos/Colores.css">
     <link rel="stylesheet" href="/Estilos/Barra.css">
     <link rel="stylesheet" href="/Estilos/Container.css">
@@ -57,17 +57,15 @@
         <div class="container-center">
 
           
-            <h1> Remitos de Compras</h1>
+            <h1> Notas de pedidos</h1>
             
             <div id= "ltp" class="lista-pedidos" >
 
-                
-            
+
                
 
             </div>
             
-
 
         </div>
 
@@ -76,13 +74,13 @@
             <div id= "ord" class="orden">
               
                 <label for="proveedorname">Proveedor</label>
-                <input type="text" id="proveedorname" class="input-cantidad input-mt" placeholder="">
+                <input type="text" id="proveedorname" class="input-cantidad input-mt" disabled="true">
 
                 <label for="proveedor">ID:</label>
-                <input type="text" id="proveedor" class="input-cantidad input-mt" placeholder="0">
+                <input type="text" id="proveedor" class="input-cantidad input-mt" disabled="true">
                   
                 <label for="notaid">Nota</label>
-                <input type="text" id="notaid" class="input-cantidad input-mt" placeholder="0">
+                <input type="text" id="notaid" class="input-cantidad input-mt" disabled="true">
                   
                 <label for="numero">Numero del Remito</label>
                 <input type="text" id="numero" class="input-cantidad input-mt" placeholder="0">
@@ -97,44 +95,24 @@
     
           </div>
     
-          <div id= "tpd" class="listapedido">
+          <div id= "listaProductos" class="listapedido">
                         
-                <div class="cartaproducto">
                 
-                  <label for="carton">Carton de Huevo</label>
-                  <input type="text" id="carton-cantidad" class="input-cantidad input-mt" placeholder="0">
-                  <input type="text" id="carton-precio" class="input-precio input-mt" placeholder="0">
-                  
-                </div>
-        
-                <div class="cartaproducto">
-    
-                  <label for="carton2">Carton de Huevo</label>
-                  <input type="text" id="carton2-cantidad" class="input-cantidad input-mt" placeholder="0">
-                  <input type="text" id="carton2-precio" class="input-precio input-mt" placeholder="0">
-    
-                </div>
-        
-                <div class="cartaproducto">
-                 <label for="maiz">Maíz</label>
-                  <input type="text" id="maiz-cantidad" class="input-cantidad input-mt" placeholder="0">
-                  <input type="text" id="maiz-precio" class="input-precio input-mt" placeholder="0">
-    
-                </div>
                 
           </div>
-          
-          <button id="btn-mdf" class="primary-button">Modificar</button>
-          <button id="btn" class="primary-button" >Confirmar</button>
+          <div id="finProce"></div>
+        
         </div>
 
 
     </div>
 
     <script>
-        
-    function conectarApiGET(url){
-        
+
+        var band; 
+   const URL_API = 'https://tranquil-thicket-16476.herokuapp.com/api/v1/remitosCompras/Finalizar';
+   async function conectarApiGET(url){
+
     fetch(url,{
         method: 'GET',
         headers: {
@@ -142,23 +120,129 @@
         } 
     })
     .then((response)=> response.json())
-    .then(data => cargarNota(data));
+    .then(data => cargarNota(data,url));
 }
-   async function cargarNota(data){
+    async function cargarNota(data,url){
         alert('Nota de pedido seleccionada');
         document.getElementById('proveedorname').value= `${data.customer.name}`;
         document.getElementById('proveedor').value= `${data.customerId}`;
         document.getElementById('notaid').value= `${data.id}`;
-        document.getElementById('carton-cantidad').value = `${data.items[0].NotaProducto.cnt}`;
-        document.getElementById('carton2-cantidad').value = `${data.items[1].NotaProducto.cnt}`;
-        document.getElementById('maiz-cantidad').value = `${data.items[2].NotaProducto.cnt}`;
-        document.getElementById('carton-precio').value =`${data.items[0].NotaProducto.precio}`;
-        document.getElementById('carton2-precio').value  = `${data.items[1].NotaProducto.precio}`;
-        document.getElementById('maiz-precio').value = `${data.items[2].NotaProducto.precio}`;
+        let componentes = []; band= true;
+        const HTMLResponse = document.querySelector("#listaProductos");
+            const tpl = data.items.map((producto) => 
+              `<div class="cartaproducto">
+
+                <label for="c${ producto.id}">${producto.nombre}</label>
+                 <input type="number" id="c${producto.id}" value="${producto.NotaProducto.cnt}" class="input-cantidad input-mt" disabled="true">
+                 <input type="number" id="p${producto.id}" class="input-precio input-mt" value="${producto.NotaProducto.precio}" disabled="true">
+
+
+             </div>`
+            );
+            HTMLResponse.innerHTML = `<div> ${tpl} </div>`;
+
+            const HTMLRes = document.querySelector("#finProce");
+            HTMLRes.innerHTML = `<div>
+                <button id="btn-mdf" class="primary-button" onclick='botonModificar("${url}")'>Modificar</button>
+                 <button id="btn" class="primary-button" onclick='finCompra("${url}")' >Confirmar</button>
+                </div>` ;
+            
+
+}
+    async function finCompra(url){
+
+    console.log(url);
+
+    fetch(url,{
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        } 
+    })
+    .then((response)=> response.json())
+    .then(data => 
+       { 
+            let items2 = [];
+            const fpn = data.items.map((producto) => 
+            {
+                let newcnt = Number(document.getElementById(`c${producto.id}`).value);
+                let newprecio = Number(document.getElementById(`p${producto.id}`).value);
+
+                if(!newcnt){
+                    if(document.getElementById(`c${producto.id}`).value == 0){ newcnt= 0;}else{
+                    alert('Error en la carga de '+producto.nombre);
+                    throw new Error('Error');
+                            }
+                }
+                if(!newprecio){
+                    if(document.getElementById(`p${producto.id}`).value==0){newprecio =0;}else{
+                    alert('Error en la carga '+producto.nombre); throw new Error('Error')
+                            }
+                };
+
+              items2.push({ cnt: newcnt, precio: newprecio, productoId: Number(producto.id) });
+                
+            });
+
+            const newnumero = Number(document.getElementById('numero').value); 
+            if(!newnumero){alert('Error en la carga de numero de remito'); throw new Error('Error');}
+
+            blcomp = {
+
+            compra: {
+                customerId: data.customerId,
+                numero: newnumero,
+                notaid: data.id,
+                modificacion: !band
+            },
+            items: items2
+        };
+        console.log(blcomp);
+         conectarApiPOST(blcomp);
+            
+           const prd = data.items.map((producto)=>{
+                document.getElementById(`c${producto.id}`).value ='';
+                document.getElementById(`p${producto.id}`).value ='';
+            });
+
+            document.getElementById('numero').value ='';
+
+         });
+        
+   }
+   async function conectarApiPOST(data){
     
+    fetch(URL_API,{
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data)
+    })
+    .then((response) => response.json());
+    
+ 
 }
    
-   
+function botonModificar(url){
+    band = false;
+    fetch(url,{
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        } 
+    })
+    .then((response)=> response.json())
+    .then(data => 
+       {        
+           const prd = data.items.map((producto)=>{
+                document.getElementById(`c${producto.id}`).disabled =band;
+                document.getElementById(`p${producto.id}`).disabled =band;
+            });
+
+         });
+        
+    }
    </script>
     <script src="./index.js" type="module" >
         

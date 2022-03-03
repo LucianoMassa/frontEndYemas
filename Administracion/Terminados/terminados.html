@@ -103,8 +103,10 @@
 
         function UpProducto(url,componente){
             console.log(componente);
-            const newcnt = Number(document.getElementById(componente).value);
-            if(!newcnt){alert("Error en la carga del campo"); throw new Error('Error');}
+            let newcnt = Number(document.getElementById(componente).value);
+            if(!newcnt){
+                if(document.getElementById(componente).value==0){newcnt =0;}else{
+                alert("Error en la carga del campo"); throw new Error('Error');}}
             fetch(url,{
             method: 'PATCH',
             headers: {
@@ -118,8 +120,9 @@
 
         function UpGalpon(url,componente){
             console.log(componente);
-            const newcnt = Number(document.getElementById(componente).value);
-            if(!newcnt){alert("Error en la carga del campo"); throw new Error('Error');}
+            let newcnt = Number(document.getElementById(componente).value);
+            if(!newcnt){if(document.getElementById(componente).value==0){ newcnt =0;}else{
+                alert("Error en la carga del campo"); throw new Error('Error');}}
             fetch(url,{
             method: 'PATCH',
             headers: {

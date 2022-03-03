@@ -1,4 +1,4 @@
-const URL_API = 'http://localhost:3000/api/v1/notasdpds/Finalizar';
+const URL_API = 'https://tranquil-thicket-16476.herokuapp.com/api/v1/notasdpds/Finalizar';
 const xhr = new XMLHttpRequest();
 
 
@@ -39,21 +39,30 @@ async function conectarApiPOST(data){
 }
 
 async function validar(){
-    const proveedor = Number(document.getElementById('proveedor').value);
-    const carton_cnt = Number(document.getElementById('carton-cantidad').value);
-    const carton2_cnt = Number(document.getElementById('carton2-cantidad').value);
-    const maiz_cnt = Number(document.getElementById('maiz-cantidad').value);
-    const carton_prc = Number(document.getElementById('carton-precio').value);
-    const carton2_prc = Number(document.getElementById('carton-precio').value);
-    const maiz_prc = Number(document.getElementById('maiz-precio').value);
+    let proveedor = Number(document.getElementById('proveedor').value);
+    let carton_cnt = Number(document.getElementById('carton-cantidad').value);
+    let carton2_cnt = Number(document.getElementById('carton2-cantidad').value);
+    let maiz_cnt = Number(document.getElementById('maiz-cantidad').value);
+    let carton_prc = Number(document.getElementById('carton-precio').value);
+    let carton2_prc = Number(document.getElementById('carton2-precio').value);
+    let maiz_prc = Number(document.getElementById('maiz-precio').value);
     
-    if(!carton_cnt){ alert('Campos incompletos'); throw new Error('Campos incompletos'); }
-    if(!carton2_cnt){alert('Campos incompletos'); throw new Error('Campos incompletos');}
-    if(!maiz_cnt){alert('Campos incompletos'); throw new Error('Campos incompletos');}
-    if(!carton_prc){alert('Campos incompletos'); throw new Error('Campos incompletos');}
-    if(!carton2_prc){alert('Campos incompletos'); throw new Error('Campos incompletos');}
-    if(!maiz_prc){alert('Campos incompletos'); throw new Error('Campos incompletos');}
-    if(!proveedor){alert('Campos incompletos'); throw new Error('Campos incompletos');}
+    if(!carton_cnt){if(document.getElementById('carton-cantidad').value==0){ carton_cnt =0;}else{
+         alert('Campos incompletos'); throw new Error('Campos incompletos'); }
+        }
+    if(!carton2_cnt){ if(document.getElementById('carton2-cantidad').value==0){ carton2_cnt =0;}else{
+        alert('Campos incompletos'); throw new Error('Campos incompletos');}
+    }
+    if(!maiz_cnt){if(document.getElementById('maiz-cantidad').value==0){ maiz_cnt=0;}else{
+        alert('Campos incompletos'); throw new Error('Campos incompletos');}}
+    if(!carton_prc){if(document.getElementById('carton-precio').value==0){ carton_prc=0;}else{
+        alert('Campos incompletos'); throw new Error('Campos incompletos');}}
+    if(!carton2_prc){if(document.getElementById('carton2-precio').value==0){ carton2_prc =0;}else{
+        alert('Campos incompletos'); throw new Error('Campos incompletos');}}
+    if(!maiz_prc){if(document.getElementById('maiz-precio').value==0){ maiz_prc =0;}else{
+        alert('Campos incompletos'); throw new Error('Campos incompletos');}}
+    if(!proveedor){
+        alert('Campos incompletos'); throw new Error('Campos incompletos');}
         
     const data ={
     nota:{
@@ -80,7 +89,7 @@ async function validar(){
      }
      
 
-     
+     console.log(data);
     const res = await conectarApiPOST(data);
 
     if(res){

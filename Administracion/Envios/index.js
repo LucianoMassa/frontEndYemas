@@ -1,6 +1,6 @@
 
-const URL_API = 'http://localhost:3000/api/v1/remitosEnvios';
-const URL_API2 = 'http://localhost:3000/api/v1/remitosEnvios/BuscarporFecha';
+const URL_API = 'https://tranquil-thicket-16476.herokuapp.com/api/v1/remitosEnvios';
+const URL_API2 = 'https://tranquil-thicket-16476.herokuapp.com/api/v1/remitosEnvios/BuscarporFecha';
 
 function conectarApiGET(url){
 
