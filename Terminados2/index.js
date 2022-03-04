@@ -63,10 +63,10 @@ async function validar(){
     ]
      }
      
-     
+     console.log(data);
     const res =  conectarApiPOST(data);
 
-    if(res){
+    if(true){
         alert('Remito Producido Exitosamente');
         document.getElementById('galpon').value= '';
         document.getElementById('bolita').value = '';
