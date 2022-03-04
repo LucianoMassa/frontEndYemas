@@ -5,16 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produccion</title>
-    <link rel="stylesheet" href="/Estilos/Colores.css">
-    <link rel="stylesheet" href="/Estilos/Barra.css">
-    <link rel="stylesheet" href="/Estilos/Container.css">
-    <link rel="stylesheet" href="/Estilos/Container-Center.css">
-    <link rel="stylesheet" href="/Estilos/Lista-Productos.css">
-    <link rel="stylesheet" href="/Estilos/Formulario.css">
-    <link rel="stylesheet" href="/Estilos/BotonPrincipal.css">
+    <link rel="stylesheet" href="../Estilos/Colores.css">
+    <link rel="stylesheet" href="../Estilos/Barra.css">
+    <link rel="stylesheet" href="../Estilos/Container.css">
+    <link rel="stylesheet" href="../Estilos/Container-Center.css">
+    <link rel="stylesheet" href="../Estilos/Lista-Productos.css">
+    <link rel="stylesheet" href="../Estilos/Formulario.css">
+    <link rel="stylesheet" href="../Estilos/BotonPrincipal.css">
 
     
-    <link rel="stylesheet" href="/Produccion/Recepcion/recpcion.css">
+    <link rel="stylesheet" href="./recpcion.css">
 </head>
 <body>
     <nav class="barra"> 
@@ -177,7 +177,7 @@
                 if(!newprecio){
                     if(document.getElementById(`p${producto.id}`).value==0){newprecio =0;}else{
                     alert('Error en la carga '+producto.nombre); throw new Error('Error')
-                            }
+                        }
                 };
 
               items2.push({ cnt: newcnt, precio: newprecio, productoId: Number(producto.id) });
