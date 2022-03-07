@@ -29,7 +29,7 @@ async function validar(){
         alert('Campo incompleto'); throw new Error('Campos incompletos');}}
     if(!galpon){alert('Campo incompleto'); throw new Error('Campos incompletos');}
     if(galpon > 0){ 
-        if (galpon > 4){alert('Nro de galpon incorrecto'); throw new Error('Nro de galpo incorrecto');}
+        if (galpon > 6){alert('Nro de galpon incorrecto'); throw new Error('Nro de galpo incorrecto');}
      }else{alert('Nro de galpon incorrecto'); throw new Error('Nro de galpo incorrecto');}
         
     const data ={

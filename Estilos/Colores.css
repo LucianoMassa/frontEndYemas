@@ -12,5 +12,22 @@
     margin: 0;
     font-family: 'Quicksand', sans-serif;
     
-    background: var(--rojo);
   }
+ 
+  .pedido{
+    background: var(--rojo);
+
+  }
+  .salida{
+    background: var(--verde);
+
+  }
+  .materia{
+    background: var(--amarillo);
+
+  }
+  .producto{
+    background: var(--celeste);
+
+  }
+  

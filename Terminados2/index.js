@@ -26,7 +26,7 @@ async function validar(){
     
     if(!galpon){alert('Nro de galpon incorrecto'); throw new Error('Campos incompletos'); }
     if(galpon > 0){ 
-        if (galpon > 4){alert('Nro de galpon incorrecto'); throw new Error('Campos incompletos');}
+        if (galpon > 6){alert('Nro de galpon incorrecto'); throw new Error('Campos incompletos');}
          }else{alert('Nro de galpon incorrecto'); throw new Error('Campos incompletos');}
     if(!bolita){if(document.getElementById('bolita').value==0){bolita=0;}else{
         alert('Campo/s mal cargado');throw new Error('Campos bolita incompletos');}}
